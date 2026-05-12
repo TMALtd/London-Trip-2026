@@ -1,4 +1,18 @@
+import { useEffect, useState } from "react";
 import { tripData } from "./data/tripData";
+
+function getCountdownParts() {
+  const target = new Date("2026-11-05T09:00:00+08:00").getTime();
+  const now = Date.now();
+  const diff = Math.max(0, target - now);
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  return { days, hours, minutes, seconds };
+}
 
 function SectionHeading({ eyebrow, title, copy }) {
   return (
@@ -11,6 +25,16 @@ function SectionHeading({ eyebrow, title, copy }) {
 }
 
 function App() {
+  const [countdown, setCountdown] = useState(getCountdownParts());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown(getCountdownParts());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="page-shell">
       <header className="hero">
@@ -29,19 +53,27 @@ function App() {
         </div>
 
         <div className="hero-panel">
-          <div className="countdown-embed-card">
-            <span className="countdown-label">Live Countdown</span>
-            <div className="countdown-embed-frame">
-              <iframe
-                id="online-alarm-kur-iframe"
-                src="https://embed-countdown.onlinealarmkur.com/en/#2026-11-05T09:00:00@Asia%2FKuala_Lumpur"
-                width="580"
-                height="100"
-                style={{ display: "block", margin: "0 auto", border: 0 }}
-                title="London Trip 2026 countdown timer"
-              />
+          <div className="countdown-card">
+            <span className="countdown-label">Countdown</span>
+            <div className="countdown-grid">
+              <div className="countdown-unit">
+                <strong>{countdown.days}</strong>
+                <span>Days</span>
+              </div>
+              <div className="countdown-unit">
+                <strong>{String(countdown.hours).padStart(2, "0")}</strong>
+                <span>Hours</span>
+              </div>
+              <div className="countdown-unit">
+                <strong>{String(countdown.minutes).padStart(2, "0")}</strong>
+                <span>Minutes</span>
+              </div>
+              <div className="countdown-unit">
+                <strong>{String(countdown.seconds).padStart(2, "0")}</strong>
+                <span>Seconds</span>
+              </div>
             </div>
-            <span className="countdown-subtitle">Timezone: Asia/Kuala Lumpur</span>
+            <span className="countdown-subtitle">Until 5 November 2026, 9:00 AM KL time</span>
           </div>
 
           <div className="fact-grid">

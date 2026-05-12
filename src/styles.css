@@ -180,7 +180,7 @@ summary {
   align-content: start;
 }
 
-.countdown-embed-card,
+.countdown-card,
 .fact-card,
 .section-card,
 .notice-card,
@@ -193,7 +193,7 @@ summary {
   border: 1px solid var(--line);
 }
 
-.countdown-embed-card {
+.countdown-card {
   display: grid;
   gap: 12px;
   padding: 22px;
@@ -201,16 +201,33 @@ summary {
   background: rgba(255, 255, 255, 0.05);
 }
 
-.countdown-embed-frame {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, 0.03);
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
 }
 
-.countdown-embed-frame iframe {
-  width: 100%;
-  max-width: 100%;
+.countdown-unit {
+  padding: 14px 10px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  border: 1px solid var(--line);
+}
+
+.countdown-unit strong {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.countdown-unit span {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .countdown-label,
@@ -457,8 +474,12 @@ summary {
     max-width: 12ch;
   }
 
-  .countdown-embed-card {
+  .countdown-card {
     padding: 18px;
+  }
+
+  .countdown-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .footer {
