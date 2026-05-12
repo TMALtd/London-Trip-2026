@@ -120,11 +120,11 @@ function App() {
                     </span>
                   </div>
                   <div className="ticket-bottom">
-                    <div>
+                    <div className="ticket-bottom-block">
                       <span>Date</span>
                       <strong>{ticket.date}</strong>
                     </div>
-                    <div>
+                    <div className="ticket-bottom-block">
                       <span>Time</span>
                       <strong>{ticket.time}</strong>
                     </div>
