@@ -17,8 +17,28 @@ export const tripData = {
   quickFacts: [
     { label: "Trip length", value: "8 days" },
     { label: "Travel window", value: "5-12 November 2026" },
-    { label: "Outbound flight", value: "MH4, KUL to LHR" },
-    { label: "Return flight", value: "MH1, LHR to KUL" },
+  ],
+  flightTickets: [
+    {
+      label: "Outbound flight",
+      airline: "Malaysia Airlines",
+      flightNumber: "MH4",
+      route: "KUL-LHR",
+      date: "5 Nov 2026",
+      time: "09:15-15:25",
+      terminalNote: "Kuala Lumpur to London Heathrow",
+      direction: "outbound",
+    },
+    {
+      label: "Return flight",
+      airline: "Malaysia Airlines",
+      flightNumber: "MH1",
+      route: "LHR-KUL",
+      date: "12 Nov 2026",
+      time: "21:25-18:20 (+1)",
+      terminalNote: "London Heathrow to Kuala Lumpur",
+      direction: "return",
+    },
   ],
   noticeBoard: [
     {
