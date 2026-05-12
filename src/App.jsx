@@ -156,39 +156,40 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid section-grid-tight">
-          <div className="section-card wide-card">
-            <SectionHeading
-              eyebrow="Why It Matters"
-              title="What this trip is designed to build"
-              copy="The presentation makes it clear that this is much more than sightseeing. It is a structured learning experience built around confidence, culture, theatre, history, and scientific curiosity."
-            />
-            <div className="pill-grid">
-              {tripData.reasons.map((reason) => (
-                <article className="pill-card" key={reason.title}>
+        <section className="section-card updates-section">
+          <SectionHeading
+            eyebrow="Live Updates"
+            title="Latest parent-facing notes"
+            copy="These cards are driven by data, so they are easy to keep current."
+          />
+          <div className="update-list">
+            {tripData.latestUpdates.map((update) => (
+              <article className="update-card" key={`${update.date}-${update.title}`}>
+                <span>{update.date}</span>
+                <h3>{update.title}</h3>
+                <p>{update.detail}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section-card why-matters-section">
+          <h2 className="why-matters-title">Why This Trip Matters</h2>
+          <div className="why-matters-list">
+            {tripData.reasons.map((reason) => (
+              <article className="why-matters-row" key={reason.title}>
+                <div className="why-matters-icon-column" aria-hidden="true">
+                  <div className="why-matters-icon-frame">
+                    <span className="why-matters-icon">{reason.icon}</span>
+                  </div>
+                </div>
+                <div className="why-matters-copy">
                   <h3>{reason.title}</h3>
                   <p>{reason.detail}</p>
-                </article>
-              ))}
-            </div>
+                </div>
+              </article>
+            ))}
           </div>
-
-          <aside className="section-card">
-            <SectionHeading
-              eyebrow="Live Updates"
-              title="Latest parent-facing notes"
-              copy="These cards are driven by data, so they are easy to keep current."
-            />
-            <div className="update-list">
-              {tripData.latestUpdates.map((update) => (
-                <article className="update-card" key={`${update.date}-${update.title}`}>
-                  <span>{update.date}</span>
-                  <h3>{update.title}</h3>
-                  <p>{update.detail}</p>
-                </article>
-              ))}
-            </div>
-          </aside>
         </section>
 
         <section className="section-card">

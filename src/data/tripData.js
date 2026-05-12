@@ -78,22 +78,27 @@ export const tripData = {
     {
       title: "Performing Arts",
       detail: "World-class theatre and backstage learning.",
+      icon: "🎭",
     },
     {
       title: "Cultural Immersion",
       detail: "Navigating one of the world's great capital cities.",
+      icon: "🌐",
     },
     {
       title: "Independence",
       detail: "Building personal responsibility and confidence.",
+      icon: "🧭",
     },
     {
       title: "History and Heritage",
       detail: "Engaging directly with over 2,000 years of British history.",
+      icon: "🏰",
     },
     {
       title: "Science and Innovation",
       detail: "Exploring global scientific discovery and film technology.",
+      icon: "⚛",
     },
   ],
   itinerary: [

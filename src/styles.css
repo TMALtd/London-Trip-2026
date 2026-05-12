@@ -576,6 +576,84 @@ summary {
   padding: 18px;
 }
 
+.updates-section,
+.why-matters-section {
+  margin-top: 22px;
+}
+
+.updates-section .update-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 22px;
+}
+
+.why-matters-section {
+  background: linear-gradient(180deg, rgba(8, 30, 63, 0.97), rgba(7, 23, 47, 0.95));
+}
+
+.why-matters-title {
+  margin: 0 0 22px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.why-matters-list {
+  display: grid;
+  gap: 14px;
+}
+
+.why-matters-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  align-items: stretch;
+  border-top: 4px solid rgba(247, 244, 237, 0.95);
+  border-bottom: 4px solid rgba(247, 244, 237, 0.95);
+  background: rgba(9, 30, 59, 0.95);
+}
+
+.why-matters-icon-column {
+  display: grid;
+  place-items: center;
+  border-left: 4px solid rgba(247, 244, 237, 0.95);
+  border-right: 4px solid rgba(247, 244, 237, 0.95);
+  padding: 14px 18px;
+}
+
+.why-matters-icon-frame {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  background: #c93434;
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.08);
+}
+
+.why-matters-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.why-matters-copy {
+  display: grid;
+  align-content: center;
+  gap: 6px;
+  padding: 22px 28px;
+}
+
+.why-matters-copy h3 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  font-weight: 700;
+}
+
+.why-matters-copy p {
+  margin: 0;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  color: rgba(247, 244, 237, 0.96);
+}
+
 .timeline-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 22px;
@@ -666,6 +744,14 @@ summary {
     grid-template-columns: 1fr;
   }
 
+  .updates-section .update-list {
+    grid-template-columns: 1fr;
+  }
+
+  .why-matters-row {
+    grid-template-columns: 132px 1fr;
+  }
+
   .hero-copy h1,
   .hero-summary {
     white-space: normal;
@@ -696,6 +782,15 @@ summary {
   .track-grid,
   .two-column-list {
     grid-template-columns: 1fr;
+  }
+
+  .why-matters-row {
+    grid-template-columns: 1fr;
+  }
+
+  .why-matters-icon-column {
+    border-right: 4px solid rgba(247, 244, 237, 0.95);
+    border-bottom: 4px solid rgba(247, 244, 237, 0.95);
   }
 
   .ticket-card {
