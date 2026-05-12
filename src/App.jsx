@@ -1,12 +1,5 @@
 import { tripData } from "./data/tripData";
 
-function daysUntilDeparture() {
-  const now = new Date();
-  const departure = new Date(tripData.departureDate);
-  const diff = departure.getTime() - now.getTime();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
-}
-
 function SectionHeading({ eyebrow, title, copy }) {
   return (
     <div className="section-heading">
@@ -18,8 +11,6 @@ function SectionHeading({ eyebrow, title, copy }) {
 }
 
 function App() {
-  const countdown = daysUntilDeparture();
-
   return (
     <div className="page-shell">
       <header className="hero">
@@ -38,10 +29,19 @@ function App() {
         </div>
 
         <div className="hero-panel">
-          <div className="countdown-card">
-            <span className="countdown-label">Countdown</span>
-            <strong>{countdown}</strong>
-            <span className="countdown-subtitle">days until departure</span>
+          <div className="countdown-embed-card">
+            <span className="countdown-label">Live Countdown</span>
+            <div className="countdown-embed-frame">
+              <iframe
+                id="online-alarm-kur-iframe"
+                src="https://embed-countdown.onlinealarmkur.com/en/#2026-11-05T09:00:00@Asia%2FKuala_Lumpur"
+                width="580"
+                height="100"
+                style={{ display: "block", margin: "0 auto", border: 0 }}
+                title="London Trip 2026 countdown timer"
+              />
+            </div>
+            <span className="countdown-subtitle">Timezone: Asia/Kuala Lumpur</span>
           </div>
 
           <div className="fact-grid">
