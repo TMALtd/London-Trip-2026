@@ -59,19 +59,19 @@ export const tripData = {
   ],
   latestUpdates: [
     {
-      date: "2026-05-12",
-      title: "Parent hub first draft published",
-      detail: "This site now mirrors the information from the parent presentation and can be expanded with live updates.",
+      date: "Wednesday 13 May 2026",
+      title: "Parent Information Session",
+      detail: "3:30 - 4:00pm, Level 5 Auditorium",
     },
     {
-      date: "2026-05-12",
-      title: "Visa guidance placeholder added",
-      detail: "ETA and visa requirements are included. Replace placeholders with school-approved links before launch.",
+      date: "31 May 2026",
+      title: "2nd payment",
+      detail: "RM4,500 due 31st May 2026",
     },
     {
-      date: "2026-05-12",
-      title: "Safety content prepared for web",
-      detail: "Student supervision, travel habits, and curfew expectations are now easy to scan on mobile.",
+      date: "31 July 2026",
+      title: "3rd payment",
+      detail: "RM4,500 due 31st July 2026",
     },
   ],
   reasons: [

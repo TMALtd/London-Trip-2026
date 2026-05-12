@@ -159,8 +159,8 @@ function App() {
         <section className="section-card updates-section">
           <SectionHeading
             eyebrow="Live Updates"
-            title="Latest parent-facing notes"
-            copy="These cards are driven by data, so they are easy to keep current."
+            title="Tuesday 12 May 2026"
+            copy="Last updated on Tuesday 12 May 2026"
           />
           <div className="update-list">
             {tripData.latestUpdates.map((update) => (
