@@ -138,13 +138,22 @@ function App() {
       </header>
 
       <main>
-        <section className="notice-strip">
-          {tripData.noticeBoard.map((notice) => (
-            <article className={`notice-card tone-${notice.tone}`} key={notice.title}>
-              <h3>{notice.title}</h3>
-              <p>{notice.detail}</p>
-            </article>
-          ))}
+        <section className="next-steps-section">
+          <div className="next-steps-header">
+            <h2>Next Steps</h2>
+          </div>
+          <div className="notice-strip">
+            {tripData.noticeBoard.map((notice) => (
+              <article className={`notice-card tone-${notice.tone}`} key={notice.title}>
+                <h3>{notice.title}</h3>
+                <p>{notice.detail}</p>
+              </article>
+            ))}
+          </div>
+          <div className="next-steps-footer">
+            Further travel information will be shared during Term 1 of AY 2026-2027, including airport
+            meeting procedures and final departure arrangements.
+          </div>
         </section>
 
         <section className="section-grid section-grid-tight">

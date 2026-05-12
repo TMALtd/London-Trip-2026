@@ -457,9 +457,41 @@ summary {
   gap: 18px;
 }
 
+.next-steps-section,
 .notice-strip,
 .section-grid {
   margin-top: 22px;
+}
+
+.next-steps-section {
+  display: grid;
+  gap: 16px;
+}
+
+.next-steps-header,
+.next-steps-footer {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: var(--shadow);
+}
+
+.next-steps-header {
+  padding: 18px 22px;
+}
+
+.next-steps-header h2 {
+  margin: 0;
+  font-family: "Fraunces", serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
+
+.next-steps-footer {
+  padding: 18px 22px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .notice-strip {
