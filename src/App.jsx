@@ -180,7 +180,7 @@ function App() {
               <article className="why-matters-row" key={reason.title}>
                 <div className="why-matters-icon-column" aria-hidden="true">
                   <div className="why-matters-icon-frame">
-                    <span className="why-matters-icon">{reason.icon}</span>
+                    <img className="why-matters-icon-image" src={reason.icon} alt="" />
                   </div>
                 </div>
                 <div className="why-matters-copy">
