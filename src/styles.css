@@ -121,16 +121,18 @@ summary {
   display: inline-flex;
   align-items: center;
   margin-bottom: 18px;
-  padding: 10px 14px;
+  padding: 10px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(5, 15, 33, 0.42);
   box-shadow: 0 18px 34px rgba(3, 10, 24, 0.28);
+  overflow: hidden;
 }
 
 .hero-logo {
   display: block;
-  width: min(100%, 260px);
+  width: min(100%, 100%);
+  max-width: 300px;
   height: auto;
 }
 
@@ -272,6 +274,15 @@ summary {
   align-content: space-between;
 }
 
+.fact-card-centered {
+  align-content: center;
+  justify-items: start;
+}
+
+.fact-card-centered strong {
+  align-self: center;
+}
+
 .fact-card strong {
   font-size: 1.1rem;
 }
@@ -350,6 +361,10 @@ summary {
   gap: 2px;
 }
 
+.ticket-meta span {
+  color: #7483a6;
+}
+
 .ticket-meta strong,
 .ticket-route-row strong,
 .ticket-bottom strong {
@@ -378,11 +393,17 @@ summary {
 .ticket-bottom div {
   display: grid;
   gap: 2px;
+  flex: 1;
+}
+
+.ticket-bottom span {
+  color: #7483a6;
 }
 
 .ticket-note {
   margin: 0;
   font-size: 0.9rem;
+  color: #8b96b0;
 }
 
 .ticket-return {

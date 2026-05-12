@@ -51,7 +51,7 @@ function App() {
           <p className="hero-summary">{tripData.hero.summary}</p>
           <div className="hero-actions">
             <a className="primary-button" href={tripData.formUrl} target="_blank" rel="noreferrer">
-              Open parent form
+              {tripData.formLabel}
             </a>
             <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
               View full PDF pack
@@ -85,7 +85,10 @@ function App() {
 
           <div className="fact-grid">
             {tripData.quickFacts.map((fact) => (
-              <article className="fact-card" key={fact.label}>
+              <article
+                className={`fact-card ${fact.label === "Trip length" ? "fact-card-centered" : ""}`}
+                key={fact.label}
+              >
                 <span>{fact.label}</span>
                 <strong>{fact.value}</strong>
               </article>

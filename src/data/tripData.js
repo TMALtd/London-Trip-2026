@@ -4,8 +4,8 @@ export const tripData = {
   departureDate: "2026-11-05T09:15:00+08:00",
   returnDate: "2026-11-12T21:25:00+00:00",
   pdfPath: "/documents/london-parent-information.pdf",
-  formLabel: "Parent Google Form",
-  formUrl: "https://forms.google.com",
+  formLabel: "Update Student Details",
+  formUrl: "https://forms.gle/w6yVJerMU6MZnz8S6",
   emergencyNote:
     "Replace emergency phone numbers, staff contacts, and live tracking links before publishing publicly.",
   hero: {
@@ -16,7 +16,7 @@ export const tripData = {
   },
   quickFacts: [
     { label: "Trip length", value: "8 days" },
-    { label: "Travel window", value: "5-12 November 2026" },
+    { label: "Travel window", value: "5-13 November 2026" },
   ],
   flightTickets: [
     {
