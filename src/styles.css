@@ -86,8 +86,7 @@ summary {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
-  gap: 24px;
+  gap: 28px;
   padding: 36px;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
@@ -97,6 +96,13 @@ summary {
   box-shadow: var(--shadow);
   position: relative;
   overflow: hidden;
+}
+
+.hero-top {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .hero::after {
@@ -195,7 +201,7 @@ summary {
 
 .hero-panel {
   display: grid;
-  gap: 18px;
+  gap: 20px;
   align-content: start;
 }
 
@@ -271,23 +277,14 @@ summary {
   padding: 18px;
   background: rgba(255, 255, 255, 0.04);
   display: grid;
-  align-content: space-between;
-}
-
-.fact-card-centered {
   grid-template-rows: auto 1fr;
   align-content: normal;
-  justify-items: start;
-}
-
-.fact-card-centered strong {
-  align-self: center;
-  justify-self: start;
-  margin: 0;
 }
 
 .fact-card strong {
   font-size: 1.1rem;
+  align-self: center;
+  margin: 0;
 }
 
 .ticket-card {
@@ -618,7 +615,7 @@ summary {
 }
 
 @media (max-width: 1080px) {
-  .hero,
+  .hero-top,
   .section-grid,
   .section-grid-tight {
     grid-template-columns: 1fr;

@@ -38,102 +38,101 @@ function App() {
   return (
     <div className="page-shell">
       <header className="hero">
-        <div className="hero-copy">
-          <div className="hero-brand">
-            <img
-              className="hero-logo"
-              src="/branding/help-school-logo.png"
-              alt="HELP International School Kuala Lumpur logo"
-            />
+        <div className="hero-top">
+          <div className="hero-copy">
+            <div className="hero-brand">
+              <img
+                className="hero-logo"
+                src="/branding/help-school-logo.png"
+                alt="HELP International School Kuala Lumpur logo"
+              />
+            </div>
+            <p className="eyebrow">{tripData.hero.eyebrow}</p>
+            <h1>{tripData.hero.headline}</h1>
+            <p className="hero-summary">{tripData.hero.summary}</p>
+            <div className="hero-actions">
+              <a className="primary-button" href={tripData.formUrl} target="_blank" rel="noreferrer">
+                {tripData.formLabel}
+              </a>
+              <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
+                View full PDF pack
+              </a>
+            </div>
           </div>
-          <p className="eyebrow">{tripData.hero.eyebrow}</p>
-          <h1>{tripData.hero.headline}</h1>
-          <p className="hero-summary">{tripData.hero.summary}</p>
-          <div className="hero-actions">
-            <a className="primary-button" href={tripData.formUrl} target="_blank" rel="noreferrer">
-              {tripData.formLabel}
-            </a>
-            <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
-              View full PDF pack
-            </a>
+
+          <div className="hero-panel">
+            <div className="countdown-card">
+              <span className="countdown-label">Countdown</span>
+              <div className="countdown-grid">
+                <div className="countdown-unit">
+                  <strong>{countdown.days}</strong>
+                  <span>Days</span>
+                </div>
+                <div className="countdown-unit">
+                  <strong>{String(countdown.hours).padStart(2, "0")}</strong>
+                  <span>Hours</span>
+                </div>
+                <div className="countdown-unit">
+                  <strong>{String(countdown.minutes).padStart(2, "0")}</strong>
+                  <span>Minutes</span>
+                </div>
+                <div className="countdown-unit">
+                  <strong>{String(countdown.seconds).padStart(2, "0")}</strong>
+                  <span>Seconds</span>
+                </div>
+              </div>
+              <span className="countdown-subtitle">Until 5 November 2026, 9:00 AM KL time</span>
+            </div>
           </div>
         </div>
 
-        <div className="hero-panel">
-          <div className="countdown-card">
-            <span className="countdown-label">Countdown</span>
-            <div className="countdown-grid">
-              <div className="countdown-unit">
-                <strong>{countdown.days}</strong>
-                <span>Days</span>
+        <div className="fact-grid">
+          {tripData.quickFacts.map((fact) => (
+            <article className="fact-card" key={fact.label}>
+              <span>{fact.label}</span>
+              <strong>{fact.value}</strong>
+            </article>
+          ))}
+          {tripData.flightTickets.map((ticket) => (
+            <article className={`ticket-card ticket-${ticket.direction}`} key={ticket.flightNumber}>
+              <div className="ticket-stub" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
               </div>
-              <div className="countdown-unit">
-                <strong>{String(countdown.hours).padStart(2, "0")}</strong>
-                <span>Hours</span>
-              </div>
-              <div className="countdown-unit">
-                <strong>{String(countdown.minutes).padStart(2, "0")}</strong>
-                <span>Minutes</span>
-              </div>
-              <div className="countdown-unit">
-                <strong>{String(countdown.seconds).padStart(2, "0")}</strong>
-                <span>Seconds</span>
-              </div>
-            </div>
-            <span className="countdown-subtitle">Until 5 November 2026, 9:00 AM KL time</span>
-          </div>
-
-          <div className="fact-grid">
-            {tripData.quickFacts.map((fact) => (
-              <article
-                className={`fact-card ${fact.label === "Trip length" ? "fact-card-centered" : ""}`}
-                key={fact.label}
-              >
-                <span>{fact.label}</span>
-                <strong>{fact.value}</strong>
-              </article>
-            ))}
-            {tripData.flightTickets.map((ticket) => (
-              <article className={`ticket-card ticket-${ticket.direction}`} key={ticket.flightNumber}>
-                <div className="ticket-stub" aria-hidden="true">
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  <span />
+              <div className="ticket-main">
+                <div className="ticket-topline">
+                  <span className="ticket-airline">{ticket.airline}</span>
+                  <span className="ticket-badge">Boarding Pass</span>
                 </div>
-                <div className="ticket-main">
-                  <div className="ticket-topline">
-                    <span className="ticket-airline">{ticket.airline}</span>
-                    <span className="ticket-badge">Boarding Pass</span>
-                  </div>
-                  <div className="ticket-meta">
-                    <span>{ticket.label}</span>
-                    <strong>{ticket.flightNumber}</strong>
-                  </div>
-                  <div className="ticket-route-row">
-                    <strong>{ticket.route}</strong>
-                    <span className="ticket-plane" aria-hidden="true">
-                      ✈
-                    </span>
-                  </div>
-                  <div className="ticket-bottom">
-                    <div className="ticket-bottom-block">
-                      <span>Date</span>
-                      <strong>{ticket.date}</strong>
-                    </div>
-                    <div className="ticket-bottom-block">
-                      <span>Time</span>
-                      <strong>{ticket.time}</strong>
-                    </div>
-                  </div>
-                  <p className="ticket-note">{ticket.terminalNote}</p>
+                <div className="ticket-meta">
+                  <span>{ticket.label}</span>
+                  <strong>{ticket.flightNumber}</strong>
                 </div>
-              </article>
-            ))}
-          </div>
+                <div className="ticket-route-row">
+                  <strong>{ticket.route}</strong>
+                  <span className="ticket-plane" aria-hidden="true">
+                    ✈
+                  </span>
+                </div>
+                <div className="ticket-bottom">
+                  <div className="ticket-bottom-block">
+                    <span>Date</span>
+                    <strong>{ticket.date}</strong>
+                  </div>
+                  <div className="ticket-bottom-block">
+                    <span>Time</span>
+                    <strong>{ticket.time}</strong>
+                  </div>
+                </div>
+                <p className="ticket-note">{ticket.terminalNote}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </header>
 
