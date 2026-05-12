@@ -39,25 +39,12 @@ function App() {
     <div className="page-shell">
       <header className="hero">
         <div className="hero-top">
-          <div className="hero-copy">
-            <div className="hero-brand">
-              <img
-                className="hero-logo"
-                src="/branding/help-school-logo.png"
-                alt="HELP International School Kuala Lumpur logo"
-              />
-            </div>
-            <p className="eyebrow">{tripData.hero.eyebrow}</p>
-            <h1>{tripData.hero.headline}</h1>
-            <p className="hero-summary">{tripData.hero.summary}</p>
-            <div className="hero-actions">
-              <a className="primary-button" href={tripData.formUrl} target="_blank" rel="noreferrer">
-                {tripData.formLabel}
-              </a>
-              <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
-                View full PDF pack
-              </a>
-            </div>
+          <div className="hero-brand">
+            <img
+              className="hero-logo"
+              src="/branding/help-school-logo.png"
+              alt="HELP International School Kuala Lumpur logo"
+            />
           </div>
 
           <div className="hero-panel">
@@ -83,6 +70,20 @@ function App() {
               </div>
               <span className="countdown-subtitle">Until 5 November 2026, 9:00 AM KL time</span>
             </div>
+          </div>
+        </div>
+
+        <div className="hero-copy">
+          <p className="eyebrow">{tripData.hero.eyebrow}</p>
+          <h1>{tripData.hero.headline}</h1>
+          <p className="hero-summary">{tripData.hero.summary}</p>
+          <div className="hero-actions">
+            <a className="primary-button" href={tripData.formUrl} target="_blank" rel="noreferrer">
+              {tripData.formLabel}
+            </a>
+            <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
+              View full PDF pack
+            </a>
           </div>
         </div>
 

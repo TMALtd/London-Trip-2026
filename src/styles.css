@@ -100,9 +100,9 @@ summary {
 
 .hero-top {
   display: grid;
-  grid-template-columns: 1.4fr 0.9fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .hero::after {
@@ -124,10 +124,11 @@ summary {
 }
 
 .hero-brand {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  margin-bottom: 18px;
-  padding: 10px;
+  justify-content: center;
+  min-height: 304px;
+  padding: 16px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(5, 15, 33, 0.42);
@@ -137,20 +138,29 @@ summary {
 
 .hero-logo {
   display: block;
-  width: min(100%, 100%);
-  max-width: 300px;
+  width: 100%;
+  max-width: 520px;
   height: auto;
 }
 
+.hero-copy {
+  display: grid;
+  justify-items: center;
+}
+
 .hero-copy h1 {
-  font-size: clamp(3rem, 7vw, 5.8rem);
+  font-size: clamp(3rem, 5.5vw, 5rem);
   margin: 10px 0 18px;
-  max-width: 10ch;
+  max-width: none;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .hero-summary {
-  max-width: 60ch;
+  max-width: none;
   font-size: 1.05rem;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .eyebrow {
@@ -167,6 +177,7 @@ summary {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 28px;
+  justify-content: center;
 }
 
 .primary-button,
@@ -202,7 +213,7 @@ summary {
 .hero-panel {
   display: grid;
   gap: 20px;
-  align-content: start;
+  align-content: stretch;
 }
 
 .countdown-card,
@@ -222,8 +233,10 @@ summary {
   display: grid;
   gap: 12px;
   padding: 22px;
+  min-height: 304px;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.05);
+  align-content: center;
 }
 
 .countdown-grid {
@@ -619,6 +632,11 @@ summary {
   .section-grid,
   .section-grid-tight {
     grid-template-columns: 1fr;
+  }
+
+  .hero-copy h1,
+  .hero-summary {
+    white-space: normal;
   }
 
   .timeline-grid,
