@@ -117,6 +117,23 @@ summary {
   letter-spacing: -0.03em;
 }
 
+.hero-brand {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 10px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 15, 33, 0.42);
+  box-shadow: 0 18px 34px rgba(3, 10, 24, 0.28);
+}
+
+.hero-logo {
+  display: block;
+  width: min(100%, 260px);
+  height: auto;
+}
+
 .hero-copy h1 {
   font-size: clamp(3rem, 7vw, 5.8rem);
   margin: 10px 0 18px;
@@ -233,7 +250,10 @@ summary {
 .countdown-label,
 .countdown-subtitle,
 .fact-card span,
-.update-card span {
+.update-card span,
+.ticket-meta span,
+.ticket-bottom span,
+.ticket-note {
   color: var(--muted);
 }
 
@@ -254,6 +274,120 @@ summary {
 
 .fact-card strong {
   font-size: 1.1rem;
+}
+
+.ticket-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  min-height: 182px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background:
+    linear-gradient(180deg, rgba(252, 253, 255, 0.98), rgba(238, 243, 252, 0.98));
+  color: #0b1730;
+  box-shadow: 0 18px 36px rgba(4, 11, 26, 0.25);
+}
+
+.ticket-stub {
+  display: grid;
+  align-content: stretch;
+  gap: 6px;
+  padding: 12px 10px;
+  background:
+    linear-gradient(180deg, #f4f6fb 0%, #dde6f5 100%);
+  border-right: 1px dashed rgba(9, 23, 48, 0.2);
+}
+
+.ticket-stub span {
+  border-radius: 3px;
+  background: linear-gradient(180deg, #0b1730, #36496f);
+}
+
+.ticket-stub span:nth-child(1) { height: 10px; }
+.ticket-stub span:nth-child(2) { height: 14px; }
+.ticket-stub span:nth-child(3) { height: 7px; }
+.ticket-stub span:nth-child(4) { height: 18px; }
+.ticket-stub span:nth-child(5) { height: 9px; }
+.ticket-stub span:nth-child(6) { height: 15px; }
+.ticket-stub span:nth-child(7) { height: 12px; }
+
+.ticket-main {
+  display: grid;
+  gap: 10px;
+  padding: 16px 18px;
+}
+
+.ticket-topline,
+.ticket-route-row,
+.ticket-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ticket-airline {
+  color: #18427e;
+  font-size: 0.92rem;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.ticket-badge {
+  border-radius: 999px;
+  padding: 5px 10px;
+  background: #173b73;
+  color: #f7f9ff;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.ticket-meta {
+  display: grid;
+  gap: 2px;
+}
+
+.ticket-meta strong,
+.ticket-route-row strong,
+.ticket-bottom strong {
+  color: #09152b;
+}
+
+.ticket-meta strong {
+  font-size: 1.15rem;
+}
+
+.ticket-route-row strong {
+  font-size: clamp(1.7rem, 3vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.ticket-plane {
+  color: #173b73;
+  font-size: 1.35rem;
+}
+
+.ticket-bottom {
+  border-top: 1px dashed rgba(9, 23, 48, 0.18);
+  padding-top: 10px;
+}
+
+.ticket-bottom div {
+  display: grid;
+  gap: 2px;
+}
+
+.ticket-note {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.ticket-return {
+  background:
+    linear-gradient(180deg, rgba(255, 248, 249, 0.98), rgba(244, 236, 245, 0.98));
 }
 
 .notice-strip,
@@ -468,6 +602,18 @@ summary {
   .track-grid,
   .two-column-list {
     grid-template-columns: 1fr;
+  }
+
+  .ticket-card {
+    grid-template-columns: 50px 1fr;
+  }
+
+  .ticket-route-row {
+    align-items: flex-start;
+  }
+
+  .ticket-route-row strong {
+    font-size: 1.55rem;
   }
 
   .hero-copy h1 {
