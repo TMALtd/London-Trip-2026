@@ -592,7 +592,7 @@ summary {
 
 .why-matters-title {
   margin: 0 0 22px;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Fraunces", serif;
   font-size: clamp(2.2rem, 4vw, 3.8rem);
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -605,8 +605,12 @@ summary {
 
 .why-matters-row {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 180px minmax(0, 1fr);
   align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+  border-left: 4px solid rgba(247, 244, 237, 0.95);
+  border-right: 4px solid rgba(247, 244, 237, 0.95);
   border-top: 4px solid rgba(247, 244, 237, 0.95);
   border-bottom: 4px solid rgba(247, 244, 237, 0.95);
   background: rgba(9, 30, 59, 0.95);
@@ -615,7 +619,6 @@ summary {
 .why-matters-icon-column {
   display: grid;
   place-items: center;
-  border-left: 4px solid rgba(247, 244, 237, 0.95);
   border-right: 4px solid rgba(247, 244, 237, 0.95);
   padding: 14px 18px;
 }
@@ -640,6 +643,7 @@ summary {
   align-content: center;
   gap: 6px;
   padding: 22px 28px;
+  min-width: 0;
 }
 
 .why-matters-copy h3 {
