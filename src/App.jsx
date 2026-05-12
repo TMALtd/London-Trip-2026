@@ -1,10 +1,17 @@
+import { useEffect, useState } from "react";
 import { tripData } from "./data/tripData";
 
-function daysUntilDeparture() {
-  const now = new Date();
-  const departure = new Date(tripData.departureDate);
-  const diff = departure.getTime() - now.getTime();
-  return Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+function getCountdownParts() {
+  const target = new Date("2026-11-05T09:00:00+08:00").getTime();
+  const now = Date.now();
+  const diff = Math.max(0, target - now);
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  return { days, hours, minutes, seconds };
 }
 
 function SectionHeading({ eyebrow, title, copy }) {
@@ -18,7 +25,15 @@ function SectionHeading({ eyebrow, title, copy }) {
 }
 
 function App() {
-  const countdown = daysUntilDeparture();
+  const [countdown, setCountdown] = useState(getCountdownParts());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown(getCountdownParts());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="page-shell">
@@ -40,8 +55,25 @@ function App() {
         <div className="hero-panel">
           <div className="countdown-card">
             <span className="countdown-label">Countdown</span>
-            <strong>{countdown}</strong>
-            <span className="countdown-subtitle">days until departure</span>
+            <div className="countdown-grid">
+              <div className="countdown-unit">
+                <strong>{countdown.days}</strong>
+                <span>Days</span>
+              </div>
+              <div className="countdown-unit">
+                <strong>{String(countdown.hours).padStart(2, "0")}</strong>
+                <span>Hours</span>
+              </div>
+              <div className="countdown-unit">
+                <strong>{String(countdown.minutes).padStart(2, "0")}</strong>
+                <span>Minutes</span>
+              </div>
+              <div className="countdown-unit">
+                <strong>{String(countdown.seconds).padStart(2, "0")}</strong>
+                <span>Seconds</span>
+              </div>
+            </div>
+            <span className="countdown-subtitle">Until 5 November 2026, 9:00 AM KL time</span>
           </div>
 
           <div className="fact-grid">

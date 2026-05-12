@@ -9,10 +9,10 @@ export const tripData = {
   emergencyNote:
     "Replace emergency phone numbers, staff contacts, and live tracking links before publishing publicly.",
   hero: {
-    eyebrow: "Parent Information Hub",
-    headline: "Everything parents need for the London trip, in one live place.",
+    eyebrow: "Information Hub",
+    headline: "London Cultural Trip 2026",
     summary:
-      "Use this site as the single source of truth for itinerary updates, travel reminders, packing guidance, and key safeguarding information.",
+      "Please refer to this website regularly for the latest London Trip updates, travel information, packing guidance, and safeguarding expectations.",
   },
   quickFacts: [
     { label: "Trip length", value: "8 days" },
