@@ -77,6 +77,11 @@ summary {
   padding: 32px 0 64px;
 }
 
+main {
+  display: grid;
+  gap: 22px;
+}
+
 .hero,
 .section-card,
 .notice-card,
@@ -457,22 +462,14 @@ summary {
   gap: 18px;
 }
 
-.next-steps-section,
-.notice-strip,
-.section-grid {
-  margin-top: 22px;
-}
-
 .travel-entry-stack {
   display: grid;
   gap: 18px;
-  margin-top: 22px;
 }
 
 .weather-money-stack {
   display: grid;
   gap: 18px;
-  margin-top: 22px;
 }
 
 .next-steps-section {
@@ -650,7 +647,6 @@ summary {
 
 .pill-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin-top: 22px;
 }
 
 .pill-card,
@@ -677,11 +673,6 @@ summary {
 .info-card,
 .track-card {
   padding: 18px;
-}
-
-.updates-section,
-.why-matters-section {
-  margin-top: 22px;
 }
 
 .updates-section .update-list {
@@ -925,7 +916,6 @@ summary {
 }
 
 .weather-row {
-  margin-top: 22px;
   align-items: start;
   grid-template-columns: minmax(0, 1fr) minmax(460px, 42%);
 }
@@ -1067,6 +1057,34 @@ summary {
   margin-top: 22px;
 }
 
+.packing-wear-gallery {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.packing-wear-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.packing-wear-card img {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.packing-wear-card figcaption {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
 .checklist li,
 .mini-list li,
 .numbered-list li {
@@ -1148,6 +1166,10 @@ summary {
   }
 
   .updates-section .update-list {
+    grid-template-columns: 1fr;
+  }
+
+  .packing-wear-gallery {
     grid-template-columns: 1fr;
   }
 

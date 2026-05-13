@@ -424,6 +424,16 @@ function App() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              <div className="packing-wear-gallery">
+                <figure className="packing-wear-card">
+                  <img src="/packing/hoody-design.png" alt="School London Trip 2026 hoodie design" />
+                  <figcaption>Official trip hoodie</figcaption>
+                </figure>
+                <figure className="packing-wear-card">
+                  <img src="/packing/tshirt-design.png" alt="School London Trip 2026 t-shirt design" />
+                  <figcaption>Official trip t-shirt</figcaption>
+                </figure>
+              </div>
             </article>
             <article>
               <h3>Theatre nights</h3>
