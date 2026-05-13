@@ -736,33 +736,37 @@ summary {
   position: relative;
   z-index: 1;
   display: grid;
-  justify-items: center;
+  justify-items: stretch;
   gap: 14px;
-  text-align: center;
+  text-align: left;
 }
 
 .itinerary-symbol {
   display: grid;
   place-items: center;
-  width: 122px;
-  height: 122px;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto;
   border-radius: 50%;
   background: #f7f4ed;
-  border: 4px solid #f7f4ed;
+  border: 3px solid #f7f4ed;
   box-shadow: 0 12px 26px rgba(3, 11, 25, 0.28);
+  overflow: hidden;
 }
 
 .itinerary-symbol img {
-  width: 116px;
-  height: 116px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 50%;
+  object-position: center;
 }
 
 .itinerary-stop-copy {
   display: grid;
   gap: 4px;
   justify-items: center;
+  text-align: center;
+  grid-template-rows: 2.1rem 1.8rem 5.2rem minmax(6.4rem, auto);
 }
 
 .itinerary-stop-copy strong {
@@ -779,16 +783,27 @@ summary {
 .itinerary-stop-copy h3 {
   margin: 8px 0 0;
   font-size: 1.1rem;
-  max-width: 18ch;
+  max-width: 16ch;
   line-height: 1.2;
+  align-self: start;
 }
 
 .itinerary-stop-copy p {
   margin: 0;
-  max-width: 24ch;
+  max-width: 23ch;
   font-size: 0.98rem;
   line-height: 1.35;
   color: var(--ink);
+  align-self: start;
+}
+
+.itinerary-section .section-heading h2 {
+  white-space: nowrap;
+}
+
+.itinerary-section .section-copy {
+  white-space: nowrap;
+  max-width: none;
 }
 
 .timeline-card ul,
@@ -876,6 +891,15 @@ summary {
     gap: 24px 18px;
   }
 
+  .itinerary-section .section-heading h2,
+  .itinerary-section .section-copy {
+    white-space: normal;
+  }
+
+  .itinerary-stop-copy {
+    grid-template-rows: auto;
+  }
+
   .itinerary-row::before {
     display: none;
   }
@@ -905,6 +929,10 @@ summary {
   .itinerary-row {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .itinerary-stop-copy {
+    grid-template-rows: auto;
   }
 
   .why-matters-row {

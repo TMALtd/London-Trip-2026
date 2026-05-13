@@ -202,11 +202,11 @@ function App() {
           </div>
         </section>
 
-        <section className="section-card">
+        <section className="section-card itinerary-section">
           <SectionHeading
             eyebrow="Itinerary"
-            title="Eight-day journey at a glance"
-            copy="A clear overview of the full London experience, designed for quick and easy access on any device."
+            title="Our journey at a glance"
+            copy="An easy-to-follow overview of the London Trip schedule, activities, and key experiences across the full journey."
           />
           <div className="itinerary-poster">
             {itineraryRows.map((row, rowIndex) => (
