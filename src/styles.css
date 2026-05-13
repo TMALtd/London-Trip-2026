@@ -463,6 +463,12 @@ summary {
   margin-top: 22px;
 }
 
+.travel-entry-stack {
+  display: grid;
+  gap: 18px;
+  margin-top: 22px;
+}
+
 .next-steps-section {
   display: grid;
   gap: 16px;

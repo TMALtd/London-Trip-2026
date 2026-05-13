@@ -229,7 +229,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid travel-entry-row">
+        <section className="travel-entry-stack">
           <div className="section-card compact-section-card">
             <SectionHeading
               eyebrow="Travel"
