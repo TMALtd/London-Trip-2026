@@ -450,7 +450,7 @@ function App() {
           <SectionHeading
             eyebrow="Learning Design"
             title="What students will experience on the ground"
-            copy="These are the three strongest content clusters from the trip deck and make a good middle section for the site."
+            copy="From West End productions to museum visits and industry workshops, students will engage in immersive real-world learning across London."
           />
           <div className="track-grid">
             {tripData.learningTracks.map((track) => (
@@ -471,7 +471,7 @@ function App() {
             <SectionHeading
               eyebrow="Expectations"
               title="What students are expected to bring and do"
-              copy="This section keeps behavioural and practical expectations visible without parents digging through slides."
+              copy="Clear expectations help ensure the trip remains safe, organised, and enjoyable for all students."
             />
             <ul className="checklist">
               {tripData.expectations.map((item) => (
@@ -484,7 +484,7 @@ function App() {
             <SectionHeading
               eyebrow="Safety"
               title="How safeguarding is being handled"
-              copy="This content is positioned prominently because it is one of the highest-interest areas for parents."
+              copy="Clear safeguarding systems, supervision structures, and travel procedures will remain in place throughout the trip."
             />
             <div className="info-stack">
               {tripData.safety.map((item) => (
