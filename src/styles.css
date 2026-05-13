@@ -917,7 +917,7 @@ summary {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   gap: 16px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .weather-widget-wrap {
@@ -925,16 +925,25 @@ summary {
   border-radius: var(--radius-md);
   overflow: hidden;
   background: rgba(255, 255, 255, 0.03);
-  min-height: 520px;
+  min-height: 430px;
   justify-self: center;
   width: 100%;
+  height: 100%;
 }
 
 .weather-widget-wrap iframe {
   width: 100%;
   height: 100%;
-  min-height: 520px;
+  min-height: 430px;
   border: 0;
+}
+
+.weather-content .checklist {
+  gap: 6px;
+}
+
+.weather-content .checklist li {
+  line-height: 1.3;
 }
 
 .track-grid {
