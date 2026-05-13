@@ -577,12 +577,22 @@ summary {
   gap: 10px;
 }
 
+.entry-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 14px;
+  align-items: start;
+}
+
 .entry-image-wrap {
-  margin-top: 8px;
+  margin-top: 0;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
+  max-width: 320px;
+  width: 100%;
+  justify-self: end;
 }
 
 .entry-image-wrap img {
@@ -941,6 +951,15 @@ summary {
 
   .travel-tip-grid {
     grid-template-columns: 1fr;
+  }
+
+  .entry-content {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-image-wrap {
+    max-width: 360px;
+    justify-self: start;
   }
 
   .updates-section .update-list {

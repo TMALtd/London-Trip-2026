@@ -268,13 +268,15 @@ function App() {
               title="UK entry requirements"
               copy="Important UK entry and visa information for students travelling on the London Trip."
             />
-            <ul className="checklist">
-              {tripData.entryRequirements.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <div className="entry-image-wrap">
-              <img src="/entry/passport-image.png" alt="UK passport and border control stamp graphic" />
+            <div className="entry-content">
+              <ul className="checklist">
+                {tripData.entryRequirements.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="entry-image-wrap">
+                <img src="/entry/passport-image.png" alt="UK passport and border control stamp graphic" />
+              </div>
             </div>
             <div className="entry-links">
               <a
