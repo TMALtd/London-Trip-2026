@@ -128,7 +128,7 @@ summary {
   align-items: center;
   justify-content: center;
   min-height: 304px;
-  padding: 16px;
+  padding: 24px 28px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(5, 15, 33, 0.42);
@@ -139,7 +139,7 @@ summary {
 .hero-logo {
   display: block;
   width: 100%;
-  max-width: 520px;
+  max-width: 640px;
   height: auto;
 }
 

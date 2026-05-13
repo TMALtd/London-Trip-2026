@@ -1,6 +1,14 @@
 import { useEffect, useState } from "react";
 import { tripData } from "./data/tripData";
 
+const currentDateFormatter = new Intl.DateTimeFormat("en-GB", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "Asia/Kuala_Lumpur",
+});
+
 function getCountdownParts() {
   const target = new Date("2026-11-05T09:00:00+08:00").getTime();
   const now = Date.now();
@@ -26,6 +34,8 @@ function SectionHeading({ eyebrow, title, copy }) {
 
 function App() {
   const [countdown, setCountdown] = useState(getCountdownParts());
+  const currentDateLabel = currentDateFormatter.format(new Date());
+  const itineraryRows = [tripData.itinerary.slice(0, 4), tripData.itinerary.slice(4, 8)];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -159,8 +169,8 @@ function App() {
         <section className="section-card updates-section">
           <SectionHeading
             eyebrow="Live Updates"
-            title="Tuesday 12 May 2026"
-            copy="Last updated on Tuesday 12 May 2026"
+            title={currentDateLabel}
+            copy={`Last updated on ${currentDateLabel}`}
           />
           <div className="update-list">
             {tripData.latestUpdates.map((update) => (
@@ -196,22 +206,25 @@ function App() {
           <SectionHeading
             eyebrow="Itinerary"
             title="Eight-day journey at a glance"
-            copy="This timeline turns the parent presentation into a format that is much easier to read on a phone."
+            copy="A clear overview of the full London experience, designed for quick and easy access on any device."
           />
-          <div className="timeline-grid">
-            {tripData.itinerary.map((item) => (
-              <article className={`timeline-card type-${item.type}`} key={item.day}>
-                <div className="timeline-meta">
-                  <span>{item.day}</span>
-                  <strong>{item.date}</strong>
-                </div>
-                <h3>{item.title}</h3>
-                <ul>
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
-              </article>
+          <div className="itinerary-poster">
+            {itineraryRows.map((row, rowIndex) => (
+              <div className="itinerary-row" key={`itinerary-row-${rowIndex + 1}`}>
+                {row.map((item) => (
+                  <article className="itinerary-stop" key={item.day}>
+                    <div className="itinerary-symbol">
+                      <img src={item.icon} alt="" />
+                    </div>
+                    <div className="itinerary-stop-copy">
+                      <strong>{item.day}</strong>
+                      <span>{item.date}</span>
+                      <h3>{item.title}</h3>
+                      <p>{item.highlights.join(", ")}</p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             ))}
           </div>
         </section>
