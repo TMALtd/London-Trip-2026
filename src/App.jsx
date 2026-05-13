@@ -361,7 +361,13 @@ function App() {
               <div className="payments-card-rail">
                 <article className="payment-brand-card">
                   <h3>Wise International Card</h3>
-                  <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
+                  <a
+                    href="https://wise.com/my/card/?lang=en&utm_source=google&matchtype=e&device=c&userlocation=9197077&keyword=wise%20card&campaignid=20934525112&adgroupid=161278430847&utm_campaign=20934525112___161278430847&gad_source=1&gad_campaignid=20934525112&gbraid=0AAAAADqE2bBKXyrjLtrkThj84DSkZ_NJP&gclid=Cj0KCQjwk_bPBhDXARIsACiq8R31UcmgsIpF3dX4oxEv89A-TFcgJpg2AOHF6sb73oDYoZfX2LL96jIaAmKSEALw_wcB"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
+                  </a>
                   <ul>
                     <li>Multi-currency travel card</li>
                     <li>Easy GBP spending</li>
@@ -370,7 +376,13 @@ function App() {
                 </article>
                 <article className="payment-brand-card">
                   <h3>Touch 'n Go Visa Card</h3>
-                  <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
+                  <a
+                    href="https://www.touchngo.com.my/gofinance/visa-card/?srsltid=AfmBOorz5Hj9yvwsSjlOYl4nvdA7P32KDs6JKvkCBBwOStfohllhDKlh"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
+                  </a>
                   <ul>
                     <li>Easy Malaysian top-up</li>
                     <li>Contactless payment support</li>
@@ -480,48 +492,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid">
-          <div className="section-card">
-            <SectionHeading
-              eyebrow="Next Steps"
-              title="What parents should do next"
-              copy="This mirrors the final action slide and gives you a natural place for future reminders."
-            />
-            <ol className="numbered-list">
-              {tripData.nextSteps.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ol>
-          </div>
-
-          <div className="section-card">
-            <SectionHeading
-              eyebrow="FAQ"
-              title="Useful implementation notes"
-              copy="These answers are for you as the site owner, so the handoff into Replit is smoother."
-            />
-            <div className="faq-list">
-              {tripData.faqs.map((faq) => (
-                <details key={faq.question}>
-                  <summary>{faq.question}</summary>
-                  <p>{faq.answer}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
-
-      <footer className="footer">
-        <div>
-          <p className="eyebrow">Before You Publish</p>
-          <h2>Privacy and live-data reminder</h2>
-          <p>{tripData.emergencyNote}</p>
-        </div>
-        <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
-          Open source PDF
-        </a>
-      </footer>
     </div>
   );
 }
