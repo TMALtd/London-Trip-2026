@@ -241,22 +241,24 @@ function App() {
                 <h3>Flight duration</h3>
                 <p>{tripData.travel.flights.duration}</p>
               </article>
-              <article className="info-card">
-                <h3>Flight time tips</h3>
-                <ul className="mini-list">
-                  {tripData.travel.flightTimeTips.map((tip) => (
-                    <li key={tip}>{tip}</li>
-                  ))}
-                </ul>
-              </article>
-              <article className="info-card">
-                <h3>Jet lag recovery tips after arrival</h3>
-                <ul className="mini-list">
-                  {tripData.travel.jetLagRecoveryTips.map((tip) => (
-                    <li key={tip}>{tip}</li>
-                  ))}
-                </ul>
-              </article>
+              <div className="travel-tip-grid">
+                <article className="info-card">
+                  <h3>Flight time tips</h3>
+                  <ul className="mini-list">
+                    {tripData.travel.flightTimeTips.map((tip) => (
+                      <li key={tip}>{tip}</li>
+                    ))}
+                  </ul>
+                </article>
+                <article className="info-card">
+                  <h3>Jet lag recovery tips after arrival</h3>
+                  <ul className="mini-list">
+                    {tripData.travel.jetLagRecoveryTips.map((tip) => (
+                      <li key={tip}>{tip}</li>
+                    ))}
+                  </ul>
+                </article>
+              </div>
             </div>
           </div>
 

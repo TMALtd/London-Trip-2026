@@ -522,13 +522,14 @@ summary {
 
 .travel-entry-row {
   align-items: stretch;
+  grid-template-columns: 1fr 1fr;
 }
 
 .compact-section-card {
-  padding: 22px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   height: 100%;
 }
 
@@ -542,6 +543,20 @@ summary {
 
 .compact-section-card .info-stack,
 .compact-section-card .checklist {
+  margin: 0;
+}
+
+.travel-tip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.travel-tip-grid .info-card {
+  height: 100%;
+}
+
+.travel-tip-grid .mini-list {
   margin: 0;
 }
 
@@ -901,6 +916,10 @@ summary {
   .hero-top,
   .section-grid,
   .section-grid-tight {
+    grid-template-columns: 1fr;
+  }
+
+  .travel-tip-grid {
     grid-template-columns: 1fr;
   }
 
