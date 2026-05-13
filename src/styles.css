@@ -577,6 +577,20 @@ summary {
   gap: 10px;
 }
 
+.entry-image-wrap {
+  margin-top: 8px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.entry-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .section-grid-tight {
   grid-template-columns: 1.25fr 0.75fr;
 }

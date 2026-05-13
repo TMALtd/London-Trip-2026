@@ -273,6 +273,9 @@ function App() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <div className="entry-image-wrap">
+              <img src="/entry/passport-image.png" alt="UK passport and border control stamp graphic" />
+            </div>
             <div className="entry-links">
               <a
                 className="secondary-button eta-button"
