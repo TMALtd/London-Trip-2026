@@ -546,8 +546,14 @@ summary {
 }
 
 .eta-button {
-  margin-top: auto;
   align-self: flex-start;
+}
+
+.entry-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .section-grid-tight {

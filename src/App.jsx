@@ -234,7 +234,7 @@ function App() {
             <SectionHeading
               eyebrow="Travel"
               title="Flights and long-haul guidance"
-              copy="A compact version of the information parents will keep looking for."
+              copy="Important information to help students travel safely, comfortably, and confidently throughout the journey."
             />
             <div className="info-stack">
               <article className="info-card">
@@ -242,9 +242,17 @@ function App() {
                 <p>{tripData.travel.flights.duration}</p>
               </article>
               <article className="info-card">
-                <h3>Jet lag guidance</h3>
+                <h3>Flight time tips</h3>
                 <ul className="mini-list">
-                  {tripData.travel.jetLagTips.map((tip) => (
+                  {tripData.travel.flightTimeTips.map((tip) => (
+                    <li key={tip}>{tip}</li>
+                  ))}
+                </ul>
+              </article>
+              <article className="info-card">
+                <h3>Jet lag recovery tips after arrival</h3>
+                <ul className="mini-list">
+                  {tripData.travel.jetLagRecoveryTips.map((tip) => (
                     <li key={tip}>{tip}</li>
                   ))}
                 </ul>
@@ -256,21 +264,31 @@ function App() {
             <SectionHeading
               eyebrow="Entry"
               title="UK entry requirements"
-              copy="Keep these items current, because visa policies are the most time-sensitive part of the trip information."
+              copy="Important UK entry and visa information for students travelling on the London Trip."
             />
             <ul className="checklist">
               {tripData.entryRequirements.map((item) => (
                 <li key={item}>{item}</li>
               ))}
             </ul>
-            <a
-              className="secondary-button eta-button"
-              href="https://www.gov.uk/eta/apply"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Apply for UK ETA
-            </a>
+            <div className="entry-links">
+              <a
+                className="secondary-button eta-button"
+                href="https://www.gov.uk/eta/apply"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Apply for UK ETA
+              </a>
+              <a
+                className="secondary-button eta-button"
+                href="https://www.gov.uk/standard-visitor/apply-standard-visitor-visa"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Apply for Standard Visitor Visa
+              </a>
+            </div>
           </div>
         </section>
 
