@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Return flight">
+  <circle cx="60" cy="60" r="58" fill="#fff" stroke="#d9dee9" stroke-width="2"/>
+  <g transform="rotate(-20 60 60)">
+    <path fill="#1f4eb3" d="M62 16c-3 0-6 3-6 9v26L28 68c-2 1-2 4 1 6l27-9v20l-8 10c-2 3 1 7 4 5l8-4 8 4c3 2 6-2 4-5l-8-10V65l27 9c3-2 3-5 1-6L64 51V25c0-6-2-9-6-9h4z"/>
+  </g>
+</svg>

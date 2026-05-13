@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Glasses and lightning">
+  <circle cx="60" cy="60" r="58" fill="#fff" stroke="#d9dee9" stroke-width="2"/>
+  <g fill="none" stroke="#1f4eb3" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="45" cy="66" r="12"/>
+    <circle cx="75" cy="66" r="12"/>
+    <path d="M57 66h6"/>
+    <path d="M33 66h-6m60 0h6"/>
+    <path d="M62 27l-8 17h8l-6 14"/>
+  </g>
+</svg>

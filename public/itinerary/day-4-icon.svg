@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Atom">
+  <circle cx="60" cy="60" r="58" fill="#fff" stroke="#d9dee9" stroke-width="2"/>
+  <g fill="none" stroke="#1f4eb3" stroke-width="4">
+    <ellipse cx="60" cy="60" rx="33" ry="14"/>
+    <ellipse cx="60" cy="60" rx="14" ry="33"/>
+    <ellipse cx="60" cy="60" rx="30" ry="12" transform="rotate(45 60 60)"/>
+  </g>
+  <circle cx="60" cy="60" r="5" fill="#1f4eb3"/>
+</svg>

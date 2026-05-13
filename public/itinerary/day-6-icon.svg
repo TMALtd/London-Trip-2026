@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ferris wheel">
+  <circle cx="60" cy="60" r="58" fill="#fff" stroke="#d9dee9" stroke-width="2"/>
+  <g fill="none" stroke="#1f4eb3" stroke-width="4" stroke-linecap="round">
+    <circle cx="60" cy="62" r="27"/>
+    <circle cx="60" cy="62" r="4" fill="#1f4eb3"/>
+    <path d="M60 35v54M33 62h54M41 43l38 38M79 43L41 81"/>
+    <path d="M48 90l12-18 12 18M42 96h36"/>
+  </g>
+</svg>
