@@ -231,7 +231,7 @@ function App() {
         </section>
 
         <section className="travel-entry-stack">
-          <div className="section-card compact-section-card">
+          <div className="section-card compact-section-card no-wrap-subtitle">
             <SectionHeading
               eyebrow="Travel"
               title="Flights and long-haul guidance"
@@ -263,7 +263,7 @@ function App() {
             </div>
           </div>
 
-          <div className="section-card compact-section-card">
+          <div className="section-card compact-section-card no-wrap-subtitle">
             <SectionHeading
               eyebrow="Entry"
               title="UK entry requirements"
@@ -329,12 +329,15 @@ function App() {
         </section>
 
         <section className="weather-money-stack">
-          <div className="section-card">
+          <div className="section-card no-wrap-subtitle">
             <SectionHeading
-              eyebrow="Payments"
-              title="Cashless travel recommendations"
-              copy="The source material strongly points parents toward prepaid travel cards rather than cash."
+              eyebrow="Money"
+              title="Money"
+              copy="The FX rate is currently quite strong against GBP, so this is a good time to buy in preparation for later."
             />
+            <p className="payments-fx-note">
+              Students should not need more than 100 GBP in additional funds for souvenirs and incidentals across the trip.
+            </p>
             <div className="payments-layout">
               <div className="payments-points">
                 {tripData.payments.map((item, index) => (
