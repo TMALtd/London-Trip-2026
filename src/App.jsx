@@ -229,8 +229,8 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid">
-          <div className="section-card">
+        <section className="section-grid travel-entry-row">
+          <div className="section-card compact-section-card">
             <SectionHeading
               eyebrow="Travel"
               title="Flights and long-haul guidance"
@@ -238,26 +238,21 @@ function App() {
             />
             <div className="info-stack">
               <article className="info-card">
-                <h3>Outbound</h3>
-                <p>{tripData.travel.flights.outbound}</p>
-              </article>
-              <article className="info-card">
-                <h3>Return</h3>
-                <p>{tripData.travel.flights.inbound}</p>
-              </article>
-              <article className="info-card">
                 <h3>Flight duration</h3>
                 <p>{tripData.travel.flights.duration}</p>
               </article>
+              <article className="info-card">
+                <h3>Jet lag guidance</h3>
+                <ul className="mini-list">
+                  {tripData.travel.jetLagTips.map((tip) => (
+                    <li key={tip}>{tip}</li>
+                  ))}
+                </ul>
+              </article>
             </div>
-            <ul className="checklist">
-              {tripData.travel.longHaulTips.map((tip) => (
-                <li key={tip}>{tip}</li>
-              ))}
-            </ul>
           </div>
 
-          <div className="section-card">
+          <div className="section-card compact-section-card">
             <SectionHeading
               eyebrow="Entry"
               title="UK entry requirements"
@@ -268,6 +263,14 @@ function App() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+            <a
+              className="secondary-button eta-button"
+              href="https://www.gov.uk/eta/apply"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Apply for UK ETA
+            </a>
           </div>
         </section>
 

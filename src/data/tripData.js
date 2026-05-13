@@ -199,7 +199,7 @@ export const tripData = {
       inbound: "MH1, London Heathrow to Kuala Lumpur, 12 Nov 2026, 21:25-18:20 (+1)",
       duration: "Approx. 14 hours to London and 13 hours returning to Kuala Lumpur.",
     },
-    longHaulTips: [
+    jetLagTips: [
       "Drink water regularly.",
       "Keep medication in cabin baggage.",
       "Move around during the flight.",

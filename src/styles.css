@@ -520,6 +520,36 @@ summary {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.travel-entry-row {
+  align-items: stretch;
+}
+
+.compact-section-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+}
+
+.compact-section-card .section-heading h2 {
+  margin-top: 2px;
+}
+
+.compact-section-card .section-copy {
+  margin-top: 0;
+}
+
+.compact-section-card .info-stack,
+.compact-section-card .checklist {
+  margin: 0;
+}
+
+.eta-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
 .section-grid-tight {
   grid-template-columns: 1.25fr 0.75fr;
 }
