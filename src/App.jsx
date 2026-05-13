@@ -36,6 +36,7 @@ function App() {
   const [countdown, setCountdown] = useState(getCountdownParts());
   const currentDateLabel = currentDateFormatter.format(new Date());
   const itineraryRows = [tripData.itinerary.slice(0, 4), tripData.itinerary.slice(4, 8)];
+  const paymentIcons = ["wallet", "lock", "train"];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -299,42 +300,81 @@ function App() {
           </div>
         </section>
 
-        <section className="weather-money-stack">
-          <div className="section-card">
+        <section className="section-grid weather-row">
+          <div className="section-card weather-text-card">
             <SectionHeading
               eyebrow="Weather"
               title="London weather in November"
               copy="A focused weather snapshot for planning clothing, daily comfort, and outdoor activities."
             />
-            <div className="weather-content">
-              <ul className="checklist">
-                {tripData.travel.londonWeather.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <div className="weather-widget-wrap">
-                <iframe
-                  src="https://commoninja.site/fb9bb00b-ab02-43fa-b071-11b9fbf7d21f"
-                  title="London weather widget"
-                  loading="lazy"
-                />
-              </div>
+            <ul className="checklist weather-checklist">
+              {tripData.travel.londonWeather.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="section-card weather-widget-card">
+            <p className="eyebrow">Widget</p>
+            <h3>Live forecast</h3>
+            <div className="weather-widget-wrap">
+              <iframe
+                src="https://commoninja.site/fb9bb00b-ab02-43fa-b071-11b9fbf7d21f"
+                title="London weather widget"
+                loading="lazy"
+              />
             </div>
           </div>
 
+        </section>
+
+        <section className="weather-money-stack">
           <div className="section-card">
             <SectionHeading
               eyebrow="Payments"
               title="Cashless travel recommendations"
               copy="The source material strongly points parents toward prepaid travel cards rather than cash."
             />
-            <div className="info-stack">
-              {tripData.payments.map((item) => (
-                <article className="info-card" key={item.title}>
-                  <h3>{item.title}</h3>
-                  <p>{item.detail}</p>
+            <div className="payments-layout">
+              <div className="payments-points">
+                {tripData.payments.map((item, index) => (
+                  <article className="payment-point" key={item.title}>
+                    <span className="payment-icon" aria-hidden="true">
+                      {paymentIcons[index] === "wallet" ? "💳" : null}
+                      {paymentIcons[index] === "lock" ? "🔒" : null}
+                      {paymentIcons[index] === "train" ? "🚇" : null}
+                    </span>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.detail}</p>
+                    </div>
+                  </article>
+                ))}
+                <p className="payments-note">
+                  Students are strongly encouraged to travel cashless where possible.
+                </p>
+              </div>
+
+              <div className="payments-card-rail">
+                <article className="payment-brand-card">
+                  <h3>Wise International Card</h3>
+                  <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
+                  <ul>
+                    <li>Multi-currency travel card</li>
+                    <li>Easy GBP spending</li>
+                    <li>Contactless Tube travel</li>
+                  </ul>
                 </article>
-              ))}
+                <article className="payment-brand-card">
+                  <h3>Touch 'n Go Visa Card</h3>
+                  <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
+                  <ul>
+                    <li>Easy Malaysian top-up</li>
+                    <li>Contactless payment support</li>
+                    <li>Safer than carrying cash</li>
+                  </ul>
+                </article>
+              </div>
             </div>
           </div>
         </section>
