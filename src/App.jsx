@@ -299,46 +299,26 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid">
+        <section className="weather-money-stack">
           <div className="section-card">
             <SectionHeading
-              eyebrow="Packing"
-              title="Weather, documents, and essentials"
-              copy="Students should prepare for cool weather, rain, long walking days, and multiple public transport journeys."
+              eyebrow="Weather"
+              title="London weather in November"
+              copy="A focused weather snapshot for planning clothing, daily comfort, and outdoor activities."
             />
-            <div className="two-column-list">
-              <article>
-                <h3>London weather in November</h3>
-                <ul>
-                  {tripData.travel.londonWeather.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-              <article>
-                <h3>Essential documents</h3>
-                <ul>
-                  {tripData.packing.documents.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-              <article>
-                <h3>Clothing checklist</h3>
-                <ul>
-                  {tripData.packing.clothing.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
-              <article>
-                <h3>Official gear and theatre nights</h3>
-                <ul>
-                  {tripData.packing.officialGear.concat(tripData.packing.theatreDressCode).map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </article>
+            <div className="weather-content">
+              <ul className="checklist">
+                {tripData.travel.londonWeather.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <div className="weather-widget-wrap">
+                <iframe
+                  src="https://commoninja.site/fb9bb00b-ab02-43fa-b071-11b9fbf7d21f"
+                  title="London weather widget"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
@@ -356,6 +336,48 @@ function App() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="section-card">
+          <SectionHeading
+            eyebrow="Packing"
+            title="Documents and essentials"
+            copy="Everything students should have prepared before departure."
+          />
+          <div className="two-column-list">
+            <article>
+              <h3>Essential documents</h3>
+              <ul>
+                {tripData.packing.documents.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article>
+              <h3>Clothing checklist</h3>
+              <ul>
+                {tripData.packing.clothing.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article>
+              <h3>Official gear</h3>
+              <ul>
+                {tripData.packing.officialGear.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+            <article>
+              <h3>Theatre nights</h3>
+              <ul>
+                {tripData.packing.theatreDressCode.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
           </div>
         </section>
 
