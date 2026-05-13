@@ -631,8 +631,8 @@ main {
 }
 
 .section-copy {
-  max-width: none;
-  white-space: nowrap;
+  max-width: 62ch;
+  white-space: normal;
 }
 
 .payments-fx-note {
