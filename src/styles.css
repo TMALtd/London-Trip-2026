@@ -132,8 +132,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 304px;
-  padding: 24px 28px;
+  min-height: 240px;
+  padding: 14px 18px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #ffffff;
@@ -144,7 +144,7 @@ main {
 .hero-logo {
   display: block;
   width: 100%;
-  max-width: 640px;
+  max-width: 520px;
   height: auto;
 }
 
@@ -237,8 +237,8 @@ main {
 .countdown-card {
   display: grid;
   gap: 12px;
-  padding: 22px;
-  min-height: 304px;
+  padding: 18px;
+  min-height: 240px;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.05);
   align-content: center;
