@@ -117,7 +117,13 @@ export const tripData = {
       title: "South Bank and West End",
       icon: "/itinerary/day-2-icon.svg",
       type: "culture",
-      highlights: ["South Bank", "Borough Market", "London Dungeon", "The Lion King"],
+      highlights: [
+        "South Bank",
+        "Borough Market",
+        "London Dungeon",
+        "The Lion King",
+        "The Lion King seats: Grand Circle, Row H seats 1-16 and Row J seats 6-16",
+      ],
     },
     {
       day: "Day 3",
@@ -125,7 +131,7 @@ export const tripData = {
       title: "Harry Potter Studios",
       icon: "/itinerary/day-3-icon.svg",
       type: "innovation",
-      highlights: ["Film production", "Sets", "Visual effects", "Fireworks at Alexandra Palace"],
+      highlights: ["Booked visit at Harry Potter Studios", "Group 1 - 12:30 pm", "Group 2 - 1:00 pm", "Group 3 - 1:30 pm"],
     },
     {
       day: "Day 4",
@@ -141,7 +147,7 @@ export const tripData = {
       title: "Theatre heritage",
       icon: "/itinerary/day-5-icon.svg",
       type: "arts",
-      highlights: ["Shakespeare's Globe", "Drury Lane Tour"],
+      highlights: ["The Globe Theatre workshop", "A Midsummer Night's Dream", "Drury Lane Tour"],
     },
     {
       day: "Day 6",
@@ -149,7 +155,12 @@ export const tripData = {
       title: "Landmarks and theatre night",
       icon: "/itinerary/day-6-icon.svg",
       type: "city",
-      highlights: ["London Eye", "Tower of London", "The Play That Goes Wrong"],
+      highlights: [
+        "London Eye",
+        "Tower of London",
+        "The Play That Goes Wrong",
+        "The Play That Goes Wrong seats: Stalls, Row H seats 18-23, Row J seats 19-25, Row K seats 13-26",
+      ],
     },
     {
       day: "Day 7",
@@ -157,7 +168,12 @@ export const tripData = {
       title: "Workshop and Covent Garden",
       icon: "/itinerary/day-7-icon.svg",
       type: "arts",
-      highlights: ["West End Workshop", "Covent Garden", "Oliver"],
+      highlights: [
+        "West End Workshop",
+        "Covent Garden",
+        "Oliver",
+        "Oliver seats: Grand Circle, Row B seats 7-20 and Row C seats 6-18",
+      ],
     },
     {
       day: "Day 8",
