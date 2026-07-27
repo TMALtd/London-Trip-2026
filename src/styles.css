@@ -91,8 +91,8 @@ main {
 
 .hero {
   display: grid;
-  gap: 28px;
-  padding: 36px;
+  gap: 20px;
+  padding: 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
   background:
@@ -106,7 +106,7 @@ main {
 .hero-top {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 16px;
   align-items: stretch;
 }
 
@@ -132,8 +132,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 240px;
-  padding: 14px 18px;
+  min-height: 180px;
+  padding: 8px 12px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: #ffffff;
@@ -144,7 +144,7 @@ main {
 .hero-logo {
   display: block;
   width: 100%;
-  max-width: 520px;
+  max-width: 460px;
   height: auto;
 }
 
@@ -217,7 +217,7 @@ main {
 
 .hero-panel {
   display: grid;
-  gap: 20px;
+  gap: 14px;
   align-content: stretch;
 }
 
@@ -236,9 +236,9 @@ main {
 
 .countdown-card {
   display: grid;
-  gap: 12px;
-  padding: 18px;
-  min-height: 240px;
+  gap: 10px;
+  padding: 16px;
+  min-height: 180px;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.05);
   align-content: center;

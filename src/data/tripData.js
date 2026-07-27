@@ -59,19 +59,20 @@ export const tripData = {
   ],
   latestUpdates: [
     {
-      date: "Wednesday 13 May 2026",
-      title: "Parent Information Session",
-      detail: "3:30 - 4:00pm, Level 5 Auditorium",
-    },
-    {
-      date: "31 May 2026",
-      title: "2nd payment",
-      detail: "RM4,500 due 31st May 2026",
-    },
-    {
       date: "31 July 2026",
       title: "3rd payment",
-      detail: "RM4,500 due 31st July 2026",
+      detail: "RM4,500 due by 31st Jul 2026",
+    },
+    {
+      date: "30 September 2026",
+      title: "Final Payment",
+      detail: "Amount TBC due by 30th September 2026",
+    },
+    {
+      date: "Trip update",
+      title: "Activities and seats",
+      detail:
+        "See below for confirmation of seats and trip times for those parents wishing to join us on any activities.",
     },
   ],
   reasons: [
