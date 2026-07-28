@@ -798,6 +798,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
+  align-items: start;
 }
 
 .itinerary-row::before {
@@ -853,10 +854,10 @@ main {
 
 .itinerary-stop-copy {
   display: grid;
-  gap: 4px;
+  gap: 2px;
   justify-items: center;
   text-align: center;
-  grid-template-rows: 2.1rem 1.8rem 4.2rem auto;
+  grid-template-rows: 2.1rem 1.8rem 4.8rem auto;
 }
 
 .itinerary-stop-copy strong {
@@ -871,12 +872,17 @@ main {
 }
 
 .itinerary-stop-copy h3 {
-  margin: 8px 0 0;
+  margin: 6px 0 0;
   font-size: 1.1rem;
-  max-width: 16ch;
+  max-width: 17ch;
   line-height: 1.2;
-  min-height: 4.2rem;
+  min-height: 4.8rem;
   align-self: start;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-wrap: balance;
 }
 
 .itinerary-highlights {
@@ -884,7 +890,7 @@ main {
   padding: 0 0 0 1.1rem;
   max-width: 23ch;
   display: grid;
-  gap: 0.45rem;
+  gap: 0.35rem;
   list-style: disc;
   font-size: 0.95rem;
   line-height: 1.3;
