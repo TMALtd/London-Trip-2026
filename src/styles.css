@@ -856,7 +856,7 @@ main {
   gap: 4px;
   justify-items: center;
   text-align: center;
-  grid-template-rows: 2.1rem 1.8rem 5.2rem minmax(6.4rem, auto);
+  grid-template-rows: 2.1rem 1.8rem auto auto;
 }
 
 .itinerary-stop-copy strong {
@@ -878,13 +878,42 @@ main {
   align-self: start;
 }
 
-.itinerary-stop-copy p {
+.itinerary-highlights {
   margin: 0;
+  padding: 0 0 0 1.1rem;
   max-width: 23ch;
-  font-size: 0.98rem;
-  line-height: 1.35;
+  display: grid;
+  gap: 0.45rem;
+  list-style: disc;
+  font-size: 0.95rem;
+  line-height: 1.3;
   color: var(--ink);
+  text-align: left;
+  justify-self: center;
   align-self: start;
+}
+
+.itinerary-highlights > li {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.itinerary-highlights > li > span {
+  display: block;
+}
+
+.itinerary-subhighlights {
+  margin: 0.1rem 0 0;
+  padding: 0 0 0 1rem;
+  display: grid;
+  gap: 0.25rem;
+  list-style: disc;
+  font-size: 0.93rem;
+  line-height: 1.25;
+}
+
+.itinerary-subhighlights > li {
+  max-width: 21ch;
 }
 
 .itinerary-section .section-heading h2 {

@@ -32,6 +32,31 @@ function SectionHeading({ eyebrow, title, copy }) {
   );
 }
 
+function renderItineraryHighlights(highlights) {
+  return (
+    <ul className="itinerary-highlights">
+      {highlights.map((highlight) => {
+        if (typeof highlight === "string") {
+          return <li key={highlight}>{highlight}</li>;
+        }
+
+        return (
+          <li key={highlight.label}>
+            <span>{highlight.label}</span>
+            {highlight.children?.length ? (
+              <ul className="itinerary-subhighlights">
+                {highlight.children.map((child) => (
+                  <li key={child}>{child}</li>
+                ))}
+              </ul>
+            ) : null}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 function App() {
   const [countdown, setCountdown] = useState(getCountdownParts());
   const currentDateLabel = currentDateFormatter.format(new Date());
@@ -221,7 +246,7 @@ function App() {
                       <strong>{item.day}</strong>
                       <span>{item.date}</span>
                       <h3>{item.title}</h3>
-                      <p>{item.highlights.join(", ")}</p>
+                      {renderItineraryHighlights(item.highlights)}
                     </div>
                   </article>
                 ))}
