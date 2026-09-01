@@ -66,7 +66,7 @@ export const tripData = {
       title: "Honest Burger food order",
       detail: "Please update your food order preference for our meal at Honest Burger on Friday 6 November 2026.",
       link: "https://forms.gle/ewUUyoGsjnXRrToW8",
-      linkLabel: "Submit food preference",
+      linkLabel: "Submit Food Preference",
     },
     {
       date: "Wednesday 23 September 2026",
@@ -87,7 +87,7 @@ export const tripData = {
       detail:
         "Double check and update all student details, especially Passport and Visa information, as we need to confirm with our tour operator.",
       link: "https://forms.gle/w6yVJerMU6MZnz8S6",
-      linkLabel: "Update student details",
+      linkLabel: "Update Student Details",
     },
   ],
   reasons: [

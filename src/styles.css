@@ -723,6 +723,38 @@ main {
   font-weight: 600;
 }
 
+.fx-widget-panel {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.fx-widget-panel h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.fx-widget-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.fx-widget-wrap iframe {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: 490px;
+  border: 0;
+}
+
 .pill-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -758,17 +790,10 @@ main {
   margin-top: 22px;
 }
 
-.update-link {
-  display: inline-block;
+.button-sm {
+  padding: 8px 14px;
+  font-size: 0.85rem;
   margin-top: 10px;
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: underline;
-  word-break: break-word;
-}
-
-.update-link:hover {
-  color: var(--gold);
 }
 
 .update-card {

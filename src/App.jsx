@@ -181,7 +181,7 @@ function App() {
               {tripData.formLabel}
             </a>
             <a className="secondary-button" href={tripData.pdfPath} target="_blank" rel="noreferrer">
-              View full PDF pack
+              View Full PDF Pack
             </a>
           </div>
         </div>
@@ -280,8 +280,13 @@ function App() {
                 <h3>{update.title}</h3>
                 <p>{update.detail}</p>
                 {update.link && (
-                  <a className="update-link" href={update.link} target="_blank" rel="noreferrer">
-                    {update.linkLabel || "Open link"}
+                  <a
+                    className="secondary-button button-sm"
+                    href={update.link}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {update.linkLabel || "Open Link"}
                   </a>
                 )}
               </article>
@@ -486,11 +491,25 @@ function App() {
             <SectionHeading
               eyebrow="Money"
               title="Money"
-              copy="The FX rate is currently quite strong against GBP, so this is a good time to buy in preparation for later."
+              copy="Check the live GBP/MYR exchange rate below when deciding how much currency to buy."
             />
             <p className="payments-fx-note">
               Students should not need more than 100 GBP in additional funds for souvenirs and incidentals across the trip.
             </p>
+            <div className="fx-widget-panel">
+              <p className="eyebrow">Live Rate</p>
+              <h3>MYR to GBP exchange rate</h3>
+              <div className="fx-widget-wrap">
+                <iframe
+                  title="fx"
+                  src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=MYR&targetCurrency=GBP"
+                  height="490"
+                  width="340"
+                  frameBorder="0"
+                  allowtransparency="true"
+                />
+              </div>
+            </div>
             <div className="payments-layout">
               <div className="payments-points">
                 {tripData.payments.map((item, index) => (
