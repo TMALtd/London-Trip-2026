@@ -611,6 +611,15 @@ main {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.expectations-safety-grid {
+  align-items: start;
+}
+
+.expectations-section,
+.safety-section {
+  height: fit-content;
+}
+
 .travel-entry-row {
   align-items: stretch;
   grid-template-columns: 1fr 1fr;

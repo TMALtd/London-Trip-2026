@@ -656,8 +656,8 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid">
-          <div className="section-card">
+        <section className="section-grid expectations-safety-grid">
+          <div className="section-card expectations-section">
             <SectionHeading
               eyebrow="Expectations"
               title="What students are expected to bring and do"
@@ -670,7 +670,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="section-card" id="safety">
+          <div className="section-card safety-section" id="safety">
             <SectionHeading
               eyebrow="Safety"
               title="How safeguarding is being handled"
