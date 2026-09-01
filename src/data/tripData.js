@@ -62,6 +62,7 @@ export const tripData = {
   latestUpdates: [
     {
       date: "Deadline: Monday 7 September 2026",
+      deadlineDate: "2026-09-07",
       title: "Honest Burger food order",
       detail: "Please update your food order preference for our meal at Honest Burger on Friday 6 November 2026.",
       link: "https://forms.gle/ewUUyoGsjnXRrToW8",
@@ -69,12 +70,14 @@ export const tripData = {
     },
     {
       date: "Wednesday 23 September 2026",
+      deadlineDate: "2026-09-23",
       title: "London Trip Briefing",
       detail:
         "3:30 - 5:00pm, Level 5 Auditorium. Zoom meeting available for those unable to attend in person - students and parents advised to attend.",
     },
     {
       date: "30 September 2026",
+      deadlineDate: "2026-09-30",
       title: "Final Payment",
       detail: "Amount RM6,650 due by 30th September 2026",
     },

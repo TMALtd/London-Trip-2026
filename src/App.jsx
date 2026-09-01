@@ -9,6 +9,33 @@ const currentDateFormatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: "Asia/Kuala_Lumpur",
 });
 
+const URGENT_WINDOW_MS = 14 * 24 * 60 * 60 * 1000;
+
+function getUpdateStatus(update, now) {
+  if (update.completed) return "completed";
+  if (!update.deadlineDate) return "urgent";
+
+  const deadline = new Date(update.deadlineDate).getTime();
+  if (deadline < now.getTime()) return "expired";
+  if (deadline - now.getTime() <= URGENT_WINDOW_MS) return "urgent";
+  return "upcoming";
+}
+
+const updateStatusOrder = { urgent: 0, upcoming: 1, expired: 2, completed: 2 };
+
+function sortUpdates(updates, now) {
+  return updates
+    .map((update) => ({ ...update, status: getUpdateStatus(update, now) }))
+    .sort((a, b) => {
+      const orderDiff = updateStatusOrder[a.status] - updateStatusOrder[b.status];
+      if (orderDiff !== 0) return orderDiff;
+
+      const aTime = a.deadlineDate ? new Date(a.deadlineDate).getTime() : Infinity;
+      const bTime = b.deadlineDate ? new Date(b.deadlineDate).getTime() : Infinity;
+      return aTime - bTime;
+    });
+}
+
 function getCountdownParts() {
   const target = new Date("2026-11-05T09:00:00+08:00").getTime();
   const now = Date.now();
@@ -60,6 +87,7 @@ function renderItineraryHighlights(highlights) {
 function App() {
   const [countdown, setCountdown] = useState(getCountdownParts());
   const currentDateLabel = currentDateFormatter.format(new Date());
+  const sortedUpdates = sortUpdates(tripData.latestUpdates, new Date());
   const itineraryRows = [tripData.itinerary.slice(0, 4), tripData.itinerary.slice(4, 8)];
   const paymentIcons = ["wallet", "lock", "train"];
 
@@ -216,8 +244,16 @@ function App() {
             copy={`Last updated on ${currentDateLabel}`}
           />
           <div className="update-list">
-            {tripData.latestUpdates.map((update) => (
-              <article className="update-card" key={`${update.date}-${update.title}`}>
+            {sortedUpdates.map((update) => (
+              <article
+                className={`update-card status-${update.status}`}
+                key={`${update.date}-${update.title}`}
+              >
+                {update.status === "urgent" && <span className="update-badge badge-urgent">Urgent</span>}
+                {update.status === "completed" && (
+                  <span className="update-badge badge-completed">Completed</span>
+                )}
+                {update.status === "expired" && <span className="update-badge badge-expired">Expired</span>}
                 <span>{update.date}</span>
                 <h3>{update.title}</h3>
                 <p>{update.detail}</p>
