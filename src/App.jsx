@@ -187,8 +187,8 @@ function App() {
             ))}
           </div>
           <div className="next-steps-footer">
-            Further travel information will be shared during Term 1 of AY 2026-2027, including airport
-            meeting procedures and final departure arrangements.
+            Full Trip Briefing - Wednesday 23rd September 2026 - 3:30 - 5:00pm, Level 5 Auditorium - attendance
+            is preferred.
           </div>
         </section>
 
