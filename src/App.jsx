@@ -89,6 +89,7 @@ function App() {
   const [itineraryDefaultOpen] = useState(() =>
     typeof window !== "undefined" ? window.innerWidth > 760 : true
   );
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const currentDateLabel = currentDateFormatter.format(new Date());
   const sortedUpdates = sortUpdates(tripData.latestUpdates, new Date());
   const itineraryRows = [tripData.itinerary.slice(0, 4), tripData.itinerary.slice(4, 8)];
@@ -100,6 +101,17 @@ function App() {
     }, 1000);
 
     return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 480);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -698,6 +710,14 @@ function App() {
 
       </main>
       </div>
+      <button
+        type="button"
+        className={`back-to-top${showBackToTop ? " is-visible" : ""}`}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Back to top"
+      >
+        ↑
+      </button>
     </>
   );
 }
