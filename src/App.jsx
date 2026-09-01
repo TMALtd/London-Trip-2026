@@ -529,54 +529,54 @@ function App() {
                 </p>
               </div>
 
-              <div className="fx-widget-panel">
-                <p className="eyebrow">Live Rate</p>
-                <h3>MYR to GBP exchange rate</h3>
-                <div className="fx-widget-wrap">
-                  <iframe
-                    title="fx"
-                    src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=MYR&targetCurrency=GBP"
-                    height="490"
-                    width="340"
-                    frameBorder="0"
-                    allowtransparency="true"
-                  />
+              <div className="money-cards-col">
+                <div className="fx-widget-panel">
+                  <p className="eyebrow">Live Rate</p>
+                  <h3>MYR to GBP exchange rate</h3>
+                  <div className="fx-widget-wrap">
+                    <iframe
+                      title="fx"
+                      src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=MYR&targetCurrency=GBP"
+                      height="490"
+                      width="340"
+                      frameBorder="0"
+                      allowtransparency="true"
+                    />
+                  </div>
+                  <p className="fx-checked-at">Rate checked {fxCheckedLabel} (KL time)</p>
                 </div>
-                <p className="fx-checked-at">Rate checked {fxCheckedLabel} (KL time)</p>
-              </div>
-            </div>
 
-            <div className="payment-cards-row">
-              <article className="payment-brand-card">
-                <h3>Wise International Card</h3>
-                <a
-                  href="https://wise.com/my/card/?lang=en&utm_source=google&matchtype=e&device=c&userlocation=9197077&keyword=wise%20card&campaignid=20934525112&adgroupid=161278430847&utm_campaign=20934525112___161278430847&gad_source=1&gad_campaignid=20934525112&gbraid=0AAAAADqE2bBKXyrjLtrkThj84DSkZ_NJP&gclid=Cj0KCQjwk_bPBhDXARIsACiq8R31UcmgsIpF3dX4oxEv89A-TFcgJpg2AOHF6sb73oDYoZfX2LL96jIaAmKSEALw_wcB"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
-                </a>
-                <ul>
-                  <li>Multi-currency travel card</li>
-                  <li>Easy GBP spending</li>
-                  <li>Contactless Tube travel</li>
-                </ul>
-              </article>
-              <article className="payment-brand-card">
-                <h3>Touch 'n Go Visa Card</h3>
-                <a
-                  href="https://www.touchngo.com.my/gofinance/visa-card/?srsltid=AfmBOorz5Hj9yvwsSjlOYl4nvdA7P32KDs6JKvkCBBwOStfohllhDKlh"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
-                </a>
-                <ul>
-                  <li>Easy Malaysian top-up</li>
-                  <li>Contactless payment support</li>
-                  <li>Safer than carrying cash</li>
-                </ul>
-              </article>
+                <article className="payment-brand-card">
+                  <h3>Wise International Card</h3>
+                  <a
+                    href="https://wise.com/my/card/?lang=en&utm_source=google&matchtype=e&device=c&userlocation=9197077&keyword=wise%20card&campaignid=20934525112&adgroupid=161278430847&utm_campaign=20934525112___161278430847&gad_source=1&gad_campaignid=20934525112&gbraid=0AAAAADqE2bBKXyrjLtrkThj84DSkZ_NJP&gclid=Cj0KCQjwk_bPBhDXARIsACiq8R31UcmgsIpF3dX4oxEv89A-TFcgJpg2AOHF6sb73oDYoZfX2LL96jIaAmKSEALw_wcB"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
+                  </a>
+                  <ul>
+                    <li>Multi-currency travel card</li>
+                    <li>Easy GBP spending</li>
+                    <li>Contactless Tube travel</li>
+                  </ul>
+                </article>
+                <article className="payment-brand-card">
+                  <h3>Touch 'n Go Visa Card</h3>
+                  <a
+                    href="https://www.touchngo.com.my/gofinance/visa-card/?srsltid=AfmBOorz5Hj9yvwsSjlOYl4nvdA7P32KDs6JKvkCBBwOStfohllhDKlh"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
+                  </a>
+                  <ul>
+                    <li>Easy Malaysian top-up</li>
+                    <li>Contactless payment support</li>
+                    <li>Safer than carrying cash</li>
+                  </ul>
+                </article>
+              </div>
             </div>
           </div>
         </section>
