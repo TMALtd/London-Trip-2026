@@ -717,6 +717,10 @@ main {
   white-space: normal;
 }
 
+.parent-info-section .section-copy {
+  max-width: 100%;
+}
+
 .fx-widget-panel {
   padding: 16px;
   border-radius: var(--radius-md);
