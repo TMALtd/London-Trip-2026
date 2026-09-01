@@ -103,14 +103,19 @@ function App() {
     <>
       <nav className="site-nav">
         <div className="site-nav-inner">
-          <a href="#live-updates">Live Updates</a>
-          <a href="#itinerary">Itinerary</a>
-          <a href="#travel">Travel</a>
-          <a href="#entry">Entry</a>
-          <a href="#weather">Weather</a>
-          <a href="#money">Money</a>
-          <a href="#packing">Packing</a>
-          <a href="#safety">Safety</a>
+          <div className="site-nav-links">
+            <a href="#live-updates">Live Updates</a>
+            <a href="#itinerary">Itinerary</a>
+            <a href="#travel">Travel</a>
+            <a href="#entry">Entry</a>
+            <a href="#weather">Weather</a>
+            <a href="#money">Money</a>
+            <a href="#packing">Packing</a>
+            <a href="#safety">Safety</a>
+          </div>
+          <a className="site-nav-updated" href="#live-updates">
+            Last updated: {currentDateLabel}
+          </a>
         </div>
       </nav>
       <div className="page-shell">

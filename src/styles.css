@@ -90,17 +90,25 @@ summary {
   width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
   display: flex;
-  gap: 24px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
   padding: 14px 0;
+}
+
+.site-nav-links {
+  display: flex;
+  gap: 24px;
+  min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;
 }
 
-.site-nav-inner::-webkit-scrollbar {
+.site-nav-links::-webkit-scrollbar {
   display: none;
 }
 
-.site-nav-inner a {
+.site-nav-links a {
   flex: none;
   white-space: nowrap;
   font-size: 0.82rem;
@@ -113,7 +121,27 @@ summary {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.site-nav-inner a:hover {
+.site-nav-links a:hover {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.site-nav-updated {
+  flex: none;
+  white-space: nowrap;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-nav-updated:hover {
   color: var(--ink);
   border-color: var(--accent);
 }
@@ -1369,6 +1397,11 @@ main {
   .track-grid,
   .two-column-list {
     grid-template-columns: 1fr;
+  }
+
+  .site-nav-updated {
+    font-size: 0.66rem;
+    padding: 5px 10px;
   }
 
   .itinerary-row {
