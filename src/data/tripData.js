@@ -66,15 +66,15 @@ export const tripData = {
       linkLabel: "Submit food preference",
     },
     {
-      date: "30 September 2026",
-      title: "Final Payment",
-      detail: "Amount RM6,650 due by 30th September 2026",
-    },
-    {
       date: "Wednesday 23 September 2026",
       title: "London Trip Briefing",
       detail:
         "3:30 - 5:00pm, Level 5 Auditorium. Zoom meeting available for those unable to attend in person - students and parents advised to attend.",
+    },
+    {
+      date: "30 September 2026",
+      title: "Final Payment",
+      detail: "Amount RM6,650 due by 30th September 2026",
     },
     {
       date: "Action needed",
