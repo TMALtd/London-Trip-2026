@@ -148,6 +148,7 @@ summary {
 
 #live-updates,
 #itinerary,
+#parent-information,
 #travel,
 #entry,
 #weather,
@@ -1081,6 +1082,53 @@ main {
 .two-column-list {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 22px;
+}
+
+.parent-info-block {
+  margin-top: 26px;
+}
+
+.parent-info-block:first-of-type {
+  margin-top: 22px;
+}
+
+.parent-info-block > h3 {
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+}
+
+.seating-date {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.seating-block {
+  margin: 2px 0 10px;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hp-group-card {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.hp-group-card strong {
+  font-size: 1.5rem;
+}
+
+.hp-group-card span {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
 }
 
 .weather-row {

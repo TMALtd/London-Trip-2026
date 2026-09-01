@@ -226,6 +226,42 @@ export const tripData = {
       highlights: ["West End workshop", "Free time for shopping", "Depart from London Heathrow"],
     },
   ],
+  parentInfo: {
+    eyebrow: "Parent Information",
+    title: "Seating, group times, and joining activities",
+    copy: "Confirmed theatre seating blocks, Harry Potter Studios group times, and guidance for parents wishing to join any activities.",
+    theatreSeating: [
+      {
+        show: "The Lion King",
+        date: "6 Nov 2026",
+        block: "Grand Circle",
+        rows: ["Row H seats 1-16", "Row J seats 6-16"],
+      },
+      {
+        show: "Oliver",
+        date: "10 Nov 2026",
+        block: "Grand Circle",
+        rows: ["Row B seats 7-20", "Row C seats 6-18"],
+      },
+      {
+        show: "The Play That Goes Wrong",
+        date: "11 Nov 2026",
+        block: "Stalls",
+        rows: ["Row H seats 18-23", "Row J seats 19-25", "Row K seats 13-26"],
+      },
+    ],
+    harryPotterGroups: [
+      { group: "Group 1", time: "12:30 pm" },
+      { group: "Group 2", time: "1:00 pm" },
+      { group: "Group 3", time: "1:30 pm" },
+    ],
+    joiningActivities: [
+      "Parents wishing to join any activities during the trip are welcome to do so, subject to seat and ticket availability.",
+      "Please indicate your interest through the school office or trip coordinator as early as possible.",
+      "Costs for additional tickets are the responsibility of the joining parent and will be confirmed once availability is known.",
+      "Confirmed seats and joining times will be posted in the Live Updates section as they become available.",
+    ],
+  },
   learningTracks: [
     {
       title: "West End Experiences",

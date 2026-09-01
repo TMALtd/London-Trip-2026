@@ -106,6 +106,7 @@ function App() {
           <div className="site-nav-links">
             <a href="#live-updates">Live Updates</a>
             <a href="#itinerary">Itinerary</a>
+            <a href="#parent-information">Parent Info</a>
             <a href="#travel">Travel</a>
             <a href="#entry">Entry</a>
             <a href="#weather">Weather</a>
@@ -315,6 +316,52 @@ function App() {
                 ))}
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="section-card parent-info-section" id="parent-information">
+          <SectionHeading
+            eyebrow={tripData.parentInfo.eyebrow}
+            title={tripData.parentInfo.title}
+            copy={tripData.parentInfo.copy}
+          />
+          <div className="parent-info-block">
+            <h3>Theatre seating</h3>
+            <div className="track-grid">
+              {tripData.parentInfo.theatreSeating.map((show) => (
+                <article className="track-card" key={show.show}>
+                  <span className="seating-date">{show.date}</span>
+                  <h3>{show.show}</h3>
+                  <p className="seating-block">{show.block}</p>
+                  <ul>
+                    {show.rows.map((row) => (
+                      <li key={row}>{row}</li>
+                    ))}
+                  </ul>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="parent-info-block">
+            <h3>Harry Potter Studios group times</h3>
+            <div className="notice-strip">
+              {tripData.parentInfo.harryPotterGroups.map((item) => (
+                <article className="notice-card hp-group-card" key={item.group}>
+                  <strong>{item.time}</strong>
+                  <span>{item.group}</span>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="parent-info-block">
+            <h3>How parents can join activities</h3>
+            <ul className="checklist">
+              {tripData.parentInfo.joiningActivities.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
           </div>
         </section>
 
