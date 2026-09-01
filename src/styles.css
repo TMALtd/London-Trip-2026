@@ -612,12 +612,28 @@ main {
 }
 
 .expectations-safety-grid {
+  grid-template-columns: 1fr;
   align-items: start;
 }
 
 .expectations-section,
 .safety-section {
   height: fit-content;
+}
+
+.expectations-section .checklist {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 24px;
+}
+
+.safety-section .info-stack {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.safety-section .mini-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px 24px;
 }
 
 .travel-entry-row {
@@ -1516,6 +1532,12 @@ main {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .expectations-section .checklist,
+  .safety-section .info-stack,
+  .safety-section .mini-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .hero-copy h1,
   .hero-summary {
     white-space: normal;
@@ -1640,6 +1662,12 @@ main {
   }
 
   .why-matters-list {
+    grid-template-columns: 1fr;
+  }
+
+  .expectations-section .checklist,
+  .safety-section .info-stack,
+  .safety-section .mini-list {
     grid-template-columns: 1fr;
   }
 
