@@ -717,15 +717,8 @@ main {
   white-space: normal;
 }
 
-.payments-fx-note {
-  margin: 2px 0 0;
-  color: var(--ink);
-  font-weight: 600;
-}
-
 .fx-widget-panel {
-  margin-top: 18px;
-  padding: 18px;
+  padding: 16px;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
@@ -734,6 +727,8 @@ main {
   align-items: center;
   text-align: center;
   gap: 4px;
+  width: 100%;
+  justify-self: start;
 }
 
 .fx-widget-panel h3 {
@@ -753,6 +748,13 @@ main {
   max-width: 340px;
   height: 490px;
   border: 0;
+}
+
+.fx-checked-at {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
 }
 
 .pill-grid {
@@ -1277,11 +1279,18 @@ main {
   font-size: 1.1rem;
 }
 
-.payments-layout {
-  margin-top: 8px;
+.money-layout {
+  margin-top: 18px;
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(360px, 0.95fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 380px);
   gap: 18px;
+  align-items: start;
+}
+
+.money-points-col {
+  display: grid;
+  gap: 14px;
+  align-content: start;
 }
 
 .payments-points {
@@ -1328,8 +1337,20 @@ main {
   font-weight: 600;
 }
 
-.payments-card-rail {
+.fx-callout {
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(243, 182, 79, 0.35);
+  background: rgba(243, 182, 79, 0.08);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.payment-cards-row {
+  margin-top: 18px;
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -1457,7 +1478,15 @@ main {
     min-height: 380px;
   }
 
-  .payments-layout {
+  .money-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .fx-widget-panel {
+    justify-self: stretch;
+  }
+
+  .payment-cards-row {
     grid-template-columns: 1fr;
   }
 

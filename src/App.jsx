@@ -9,6 +9,14 @@ const currentDateFormatter = new Intl.DateTimeFormat("en-GB", {
   timeZone: "Asia/Kuala_Lumpur",
 });
 
+const fxCheckedTimeFormatter = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "long",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZone: "Asia/Kuala_Lumpur",
+});
+
 const URGENT_WINDOW_MS = 14 * 24 * 60 * 60 * 1000;
 
 function getUpdateStatus(update, now) {
@@ -91,6 +99,7 @@ function App() {
   );
   const [showBackToTop, setShowBackToTop] = useState(false);
   const currentDateLabel = currentDateFormatter.format(new Date());
+  const fxCheckedLabel = fxCheckedTimeFormatter.format(new Date());
   const sortedUpdates = sortUpdates(tripData.latestUpdates, new Date());
   const itineraryRows = [tripData.itinerary.slice(0, 4), tripData.itinerary.slice(4, 8)];
   const paymentIcons = ["wallet", "lock", "train"];
@@ -490,78 +499,84 @@ function App() {
           <div className="section-card no-wrap-subtitle">
             <SectionHeading
               eyebrow="Money"
-              title="Money"
-              copy="Check the live GBP/MYR exchange rate below when deciding how much currency to buy."
+              title="Currency and payment cards"
+              copy="Guidance on spending, cards, and the current GBP/MYR exchange rate."
             />
-            <p className="payments-fx-note">
-              Students should not need more than 100 GBP in additional funds for souvenirs and incidentals across the trip.
-            </p>
-            <div className="fx-widget-panel">
-              <p className="eyebrow">Live Rate</p>
-              <h3>MYR to GBP exchange rate</h3>
-              <div className="fx-widget-wrap">
-                <iframe
-                  title="fx"
-                  src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=MYR&targetCurrency=GBP"
-                  height="490"
-                  width="340"
-                  frameBorder="0"
-                  allowtransparency="true"
-                />
-              </div>
-            </div>
-            <div className="payments-layout">
-              <div className="payments-points">
-                {tripData.payments.map((item, index) => (
-                  <article className="payment-point" key={item.title}>
-                    <span className="payment-icon" aria-hidden="true">
-                      {paymentIcons[index] === "wallet" ? "💳" : null}
-                      {paymentIcons[index] === "lock" ? "🔒" : null}
-                      {paymentIcons[index] === "train" ? "🚇" : null}
-                    </span>
-                    <div>
-                      <h3>{item.title}</h3>
-                      <p>{item.detail}</p>
-                    </div>
-                  </article>
-                ))}
+
+            <div className="money-layout">
+              <div className="money-points-col">
+                <div className="payments-points">
+                  {tripData.payments.map((item, index) => (
+                    <article className="payment-point" key={item.title}>
+                      <span className="payment-icon" aria-hidden="true">
+                        {paymentIcons[index] === "wallet" ? "💳" : null}
+                        {paymentIcons[index] === "lock" ? "🔒" : null}
+                        {paymentIcons[index] === "train" ? "🚇" : null}
+                      </span>
+                      <div>
+                        <h3>{item.title}</h3>
+                        <p>{item.detail}</p>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+                <div className="fx-callout">
+                  Students should not need more than 100 GBP in additional funds for souvenirs and
+                  incidentals across the trip.
+                </div>
                 <p className="payments-note">
                   Students are strongly encouraged to travel cashless where possible.
                 </p>
               </div>
 
-              <div className="payments-card-rail">
-                <article className="payment-brand-card">
-                  <h3>Wise International Card</h3>
-                  <a
-                    href="https://wise.com/my/card/?lang=en&utm_source=google&matchtype=e&device=c&userlocation=9197077&keyword=wise%20card&campaignid=20934525112&adgroupid=161278430847&utm_campaign=20934525112___161278430847&gad_source=1&gad_campaignid=20934525112&gbraid=0AAAAADqE2bBKXyrjLtrkThj84DSkZ_NJP&gclid=Cj0KCQjwk_bPBhDXARIsACiq8R31UcmgsIpF3dX4oxEv89A-TFcgJpg2AOHF6sb73oDYoZfX2LL96jIaAmKSEALw_wcB"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
-                  </a>
-                  <ul>
-                    <li>Multi-currency travel card</li>
-                    <li>Easy GBP spending</li>
-                    <li>Contactless Tube travel</li>
-                  </ul>
-                </article>
-                <article className="payment-brand-card">
-                  <h3>Touch 'n Go Visa Card</h3>
-                  <a
-                    href="https://www.touchngo.com.my/gofinance/visa-card/?srsltid=AfmBOorz5Hj9yvwsSjlOYl4nvdA7P32KDs6JKvkCBBwOStfohllhDKlh"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
-                  </a>
-                  <ul>
-                    <li>Easy Malaysian top-up</li>
-                    <li>Contactless payment support</li>
-                    <li>Safer than carrying cash</li>
-                  </ul>
-                </article>
+              <div className="fx-widget-panel">
+                <p className="eyebrow">Live Rate</p>
+                <h3>MYR to GBP exchange rate</h3>
+                <div className="fx-widget-wrap">
+                  <iframe
+                    title="fx"
+                    src="https://wise.com/gb/currency-converter/fx-widget/converter?sourceCurrency=MYR&targetCurrency=GBP"
+                    height="490"
+                    width="340"
+                    frameBorder="0"
+                    allowtransparency="true"
+                  />
+                </div>
+                <p className="fx-checked-at">Rate checked {fxCheckedLabel} (KL time)</p>
               </div>
+            </div>
+
+            <div className="payment-cards-row">
+              <article className="payment-brand-card">
+                <h3>Wise International Card</h3>
+                <a
+                  href="https://wise.com/my/card/?lang=en&utm_source=google&matchtype=e&device=c&userlocation=9197077&keyword=wise%20card&campaignid=20934525112&adgroupid=161278430847&utm_campaign=20934525112___161278430847&gad_source=1&gad_campaignid=20934525112&gbraid=0AAAAADqE2bBKXyrjLtrkThj84DSkZ_NJP&gclid=Cj0KCQjwk_bPBhDXARIsACiq8R31UcmgsIpF3dX4oxEv89A-TFcgJpg2AOHF6sb73oDYoZfX2LL96jIaAmKSEALw_wcB"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/payments/wise-card.png" alt="Wise card in use for contactless payment" />
+                </a>
+                <ul>
+                  <li>Multi-currency travel card</li>
+                  <li>Easy GBP spending</li>
+                  <li>Contactless Tube travel</li>
+                </ul>
+              </article>
+              <article className="payment-brand-card">
+                <h3>Touch 'n Go Visa Card</h3>
+                <a
+                  href="https://www.touchngo.com.my/gofinance/visa-card/?srsltid=AfmBOorz5Hj9yvwsSjlOYl4nvdA7P32KDs6JKvkCBBwOStfohllhDKlh"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="/payments/touchngo-card.png" alt="Touch 'n Go Visa card for travel payments" />
+                </a>
+                <ul>
+                  <li>Easy Malaysian top-up</li>
+                  <li>Contactless payment support</li>
+                  <li>Safer than carrying cash</li>
+                </ul>
+              </article>
             </div>
           </div>
         </section>
