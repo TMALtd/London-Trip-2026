@@ -228,7 +228,7 @@ export const tripData = {
   ],
   parentInfo: {
     eyebrow: "Parent Information",
-    title: "Seating, group times, and joining activities",
+    title: "Parent Trip Details",
     copy: "Confirmed theatre seating blocks, Harry Potter Studios group times, and guidance for parents wishing to join any activities.",
     theatreSeating: [
       {
@@ -257,9 +257,8 @@ export const tripData = {
     ],
     joiningActivities: [
       "Parents wishing to join any activities during the trip are welcome to do so, subject to seat and ticket availability.",
-      "Please indicate your interest through the school office or trip coordinator as early as possible.",
-      "Costs for additional tickets are the responsibility of the joining parent and will be confirmed once availability is known.",
-      "Confirmed seats and joining times will be posted in the Live Updates section as they become available.",
+      "Costs for additional tickets are the responsibility of the joining parent and must be paid directly to the event vendors.",
+      "Please submit your details to Mr Ben and advise which activities you would like to join.",
     ],
   },
   learningTracks: [
