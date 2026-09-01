@@ -415,7 +415,7 @@ main {
 
 .ticket-bottom {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px dashed rgba(9, 23, 48, 0.18);
   padding-top: 10px;
   gap: 10px;

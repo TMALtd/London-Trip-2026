@@ -27,6 +27,7 @@ export const tripData = {
       date: "5 Nov 2026",
       time: "09:15-15:25",
       terminalNote: "Kuala Lumpur to London Heathrow",
+      luggageAllowance: "25KG",
       direction: "outbound",
     },
     {
@@ -37,6 +38,7 @@ export const tripData = {
       date: "12 Nov 2026",
       time: "21:25-18:20 (+1)",
       terminalNote: "London Heathrow to Kuala Lumpur",
+      luggageAllowance: "25KG",
       direction: "return",
     },
   ],

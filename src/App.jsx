@@ -165,6 +165,10 @@ function App() {
                     <span>Time</span>
                     <strong>{ticket.time}</strong>
                   </div>
+                  <div className="ticket-bottom-block">
+                    <span>Luggage</span>
+                    <strong>{ticket.luggageAllowance}</strong>
+                  </div>
                 </div>
                 <p className="ticket-note">{ticket.terminalNote}</p>
               </div>
