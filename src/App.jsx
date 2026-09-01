@@ -72,7 +72,20 @@ function App() {
   }, []);
 
   return (
-    <div className="page-shell">
+    <>
+      <nav className="site-nav">
+        <div className="site-nav-inner">
+          <a href="#live-updates">Live Updates</a>
+          <a href="#itinerary">Itinerary</a>
+          <a href="#travel">Travel</a>
+          <a href="#entry">Entry</a>
+          <a href="#weather">Weather</a>
+          <a href="#money">Money</a>
+          <a href="#packing">Packing</a>
+          <a href="#safety">Safety</a>
+        </div>
+      </nav>
+      <div className="page-shell">
       <header className="hero">
         <div className="hero-top">
           <div className="hero-brand">
@@ -196,7 +209,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-card updates-section">
+        <section className="section-card updates-section" id="live-updates">
           <SectionHeading
             eyebrow="Live Updates"
             title={currentDateLabel}
@@ -237,7 +250,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-card itinerary-section">
+        <section className="section-card itinerary-section" id="itinerary">
           <SectionHeading
             eyebrow="Itinerary"
             title="Our journey at a glance"
@@ -265,7 +278,7 @@ function App() {
         </section>
 
         <section className="travel-entry-stack">
-          <div className="section-card compact-section-card no-wrap-subtitle">
+          <div className="section-card compact-section-card no-wrap-subtitle" id="travel">
             <SectionHeading
               eyebrow="Travel"
               title="Flights and long-haul guidance"
@@ -297,7 +310,7 @@ function App() {
             </div>
           </div>
 
-          <div className="section-card compact-section-card no-wrap-subtitle">
+          <div className="section-card compact-section-card no-wrap-subtitle" id="entry">
             <SectionHeading
               eyebrow="Entry"
               title="UK entry requirements"
@@ -334,7 +347,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid weather-row">
+        <section className="section-grid weather-row" id="weather">
           <div className="section-card weather-text-card">
             <SectionHeading
               eyebrow="Weather"
@@ -362,7 +375,7 @@ function App() {
 
         </section>
 
-        <section className="weather-money-stack">
+        <section className="weather-money-stack" id="money">
           <div className="section-card no-wrap-subtitle">
             <SectionHeading
               eyebrow="Money"
@@ -428,7 +441,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section-card">
+        <section className="section-card" id="packing">
           <SectionHeading
             eyebrow="Packing"
             title="Documents and essentials"
@@ -514,7 +527,7 @@ function App() {
             </ul>
           </div>
 
-          <div className="section-card">
+          <div className="section-card" id="safety">
             <SectionHeading
               eyebrow="Safety"
               title="How safeguarding is being handled"
@@ -537,7 +550,8 @@ function App() {
         </section>
 
       </main>
-    </div>
+      </div>
+    </>
   );
 }
 
