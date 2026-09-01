@@ -212,7 +212,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 180px;
+  min-height: 140px;
   padding: 8px 12px;
   border-radius: 18px;
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -224,7 +224,7 @@ main {
 .hero-logo {
   display: block;
   width: 100%;
-  max-width: 460px;
+  max-width: 360px;
   height: auto;
 }
 
@@ -316,9 +316,9 @@ main {
 
 .countdown-card {
   display: grid;
-  gap: 10px;
-  padding: 16px;
-  min-height: 180px;
+  gap: 8px;
+  padding: 14px;
+  min-height: 140px;
   border-radius: var(--radius-lg);
   background: rgba(255, 255, 255, 0.05);
   align-content: center;
@@ -327,12 +327,12 @@ main {
 .countdown-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 10px;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 .countdown-unit {
-  padding: 14px 10px;
+  padding: 10px 8px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.05);
   text-align: center;
@@ -341,9 +341,9 @@ main {
 
 .countdown-unit strong {
   display: block;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.6rem, 3.4vw, 2.2rem);
   line-height: 1;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .countdown-unit span {
@@ -677,7 +677,7 @@ main {
   width: 100%;
   justify-self: center;
   align-self: center;
-  min-height: 220px;
+  min-height: 160px;
   display: grid;
 }
 
@@ -1100,8 +1100,8 @@ main {
 
 .weather-widget-wrap iframe {
   width: 100%;
-  height: 620px;
-  min-height: 620px;
+  height: 420px;
+  min-height: 420px;
   border: 0;
 }
 
@@ -1147,31 +1147,31 @@ main {
 
 .payment-point {
   display: grid;
-  grid-template-columns: 74px minmax(0, 1fr);
+  grid-template-columns: 52px minmax(0, 1fr);
   gap: 14px;
   align-items: start;
 }
 
 .payment-point h3 {
   margin: 0 0 4px;
-  font-size: 2rem;
-  line-height: 1;
+  font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .payment-point p {
   margin: 0;
   color: var(--ink);
-  font-size: 1.85rem;
-  line-height: 1.22;
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
 
 .payment-icon {
-  width: 74px;
-  height: 74px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
   background: #c93434;
   color: #fff;
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, 0.08);
@@ -1197,17 +1197,17 @@ main {
 }
 
 .payment-brand-card h3 {
-  margin: 0 0 10px;
-  font-size: 2rem;
-  line-height: 1.05;
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  line-height: 1.15;
 }
 
 .payment-brand-card img {
   width: 100%;
-  height: 156px;
+  height: 120px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .payment-brand-card ul {
@@ -1308,24 +1308,12 @@ main {
   }
 
   .weather-widget-wrap iframe {
-    height: 560px;
-    min-height: 560px;
+    height: 380px;
+    min-height: 380px;
   }
 
   .payments-layout {
     grid-template-columns: 1fr;
-  }
-
-  .payment-point h3 {
-    font-size: 1.45rem;
-  }
-
-  .payment-point p {
-    font-size: 1.15rem;
-  }
-
-  .payment-brand-card h3 {
-    font-size: 1.5rem;
   }
 
   .entry-image-wrap {
