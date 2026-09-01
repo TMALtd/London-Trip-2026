@@ -154,7 +154,8 @@ summary {
 #weather,
 #money,
 #packing,
-#safety {
+#safety,
+#emergency-contacts {
   scroll-margin-top: 84px;
 }
 
@@ -1129,6 +1130,22 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.8rem;
+}
+
+.contacts-pending-note {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(243, 182, 79, 0.35);
+  background: rgba(243, 182, 79, 0.08);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.pending-value {
+  font-style: italic;
+  color: var(--gold);
 }
 
 .weather-row {

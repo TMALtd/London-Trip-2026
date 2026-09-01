@@ -408,6 +408,24 @@ export const tripData = {
     "EST app with itinerary and location tracking",
     "Regular headcounts throughout the day",
   ],
+  emergencyContacts: {
+    note: "Emergency numbers, staff contacts, airport meeting arrangements, and the live tracking link are pending final school approval. This section will be updated with confirmed details closer to departure.",
+    emergency: [
+      { label: "24-hour emergency contact", detail: "To be confirmed" },
+      { label: "School office (Kuala Lumpur)", detail: "To be confirmed" },
+    ],
+    staff: [
+      { role: "Trip Lead", name: "To be confirmed", contact: "To be confirmed" },
+      { role: "Assistant Trip Lead", name: "To be confirmed", contact: "To be confirmed" },
+      { role: "EST Tour Guide", name: "To be confirmed", contact: "To be confirmed" },
+    ],
+    airportMeeting: {
+      outbound:
+        "Meeting point and time for departure on 5 November 2026 will be confirmed closer to the date.",
+      return: "Arrival collection arrangements for 12 November 2026 will be confirmed closer to the date.",
+    },
+    liveTracking: "Live tracking will be added here once approved by the school.",
+  },
   nextSteps: [
     "Complete the parent Google Form as soon as possible.",
     "Submit passport details and provide ETA or visa updates when available.",

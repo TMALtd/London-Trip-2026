@@ -113,6 +113,7 @@ function App() {
             <a href="#money">Money</a>
             <a href="#packing">Packing</a>
             <a href="#safety">Safety</a>
+            <a href="#emergency-contacts">Contacts</a>
           </div>
           <a className="site-nav-updated" href="#live-updates">
             Last updated: {currentDateLabel}
@@ -634,6 +635,59 @@ function App() {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </div>
+        </section>
+
+        <section className="section-card contacts-section" id="emergency-contacts">
+          <SectionHeading
+            eyebrow="Emergency Contacts"
+            title="Emergency, staff contacts, and travel tracking"
+            copy="Key safety information for the trip. Some details are pending final school approval and will be added here once confirmed."
+          />
+          <div className="contacts-pending-note">{tripData.emergencyContacts.note}</div>
+
+          <div className="parent-info-block">
+            <h3>Emergency contacts</h3>
+            <div className="info-stack">
+              {tripData.emergencyContacts.emergency.map((item) => (
+                <article className="info-card" key={item.label}>
+                  <h3>{item.label}</h3>
+                  <p className="pending-value">{item.detail}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="parent-info-block">
+            <h3>Staff contacts</h3>
+            <div className="track-grid">
+              {tripData.emergencyContacts.staff.map((person) => (
+                <article className="track-card" key={person.role}>
+                  <span className="seating-date">{person.role}</span>
+                  <h3>{person.name}</h3>
+                  <p className="pending-value">{person.contact}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="parent-info-block">
+            <h3>Airport meeting arrangements</h3>
+            <div className="info-stack">
+              <article className="info-card">
+                <h3>Outbound - 5 November 2026</h3>
+                <p>{tripData.emergencyContacts.airportMeeting.outbound}</p>
+              </article>
+              <article className="info-card">
+                <h3>Return - 12 November 2026</h3>
+                <p>{tripData.emergencyContacts.airportMeeting.return}</p>
+              </article>
+            </div>
+          </div>
+
+          <div className="parent-info-block">
+            <h3>Live tracking</h3>
+            <p className="pending-value">{tripData.emergencyContacts.liveTracking}</p>
           </div>
         </section>
 
