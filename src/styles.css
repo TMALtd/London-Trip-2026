@@ -676,6 +676,19 @@ main {
   margin-top: 22px;
 }
 
+.update-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.update-link:hover {
+  color: var(--gold);
+}
+
 .why-matters-section {
   background: linear-gradient(180deg, rgba(8, 30, 63, 0.97), rgba(7, 23, 47, 0.95));
 }

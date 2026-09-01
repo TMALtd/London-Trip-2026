@@ -204,6 +204,11 @@ function App() {
                 <span>{update.date}</span>
                 <h3>{update.title}</h3>
                 <p>{update.detail}</p>
+                {update.link && (
+                  <a className="update-link" href={update.link} target="_blank" rel="noreferrer">
+                    {update.linkLabel || "Open link"}
+                  </a>
+                )}
               </article>
             ))}
           </div>

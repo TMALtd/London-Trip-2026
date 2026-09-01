@@ -59,20 +59,30 @@ export const tripData = {
   ],
   latestUpdates: [
     {
-      date: "31 July 2026",
-      title: "3rd payment",
-      detail: "RM4,500 due by 31st Jul 2026",
-    },
-    {
       date: "30 September 2026",
       title: "Final Payment",
-      detail: "Amount TBC due by 30th September 2026",
+      detail: "Amount RM6,650 due by 30th September 2026",
     },
     {
-      date: "Trip update",
-      title: "Activities and seats",
+      date: "Wednesday 23 September 2026",
+      title: "London Trip Briefing",
       detail:
-        "See below for confirmation of seats and trip times for those parents wishing to join us on any activities.",
+        "3:30 - 5:00pm, Level 5 Auditorium. Zoom meeting available for those unable to attend in person - students and parents advised to attend.",
+    },
+    {
+      date: "Action needed",
+      title: "Update student details",
+      detail:
+        "Double check and update all student details, especially Passport and Visa information, as we need to confirm with our tour operator.",
+      link: "https://forms.gle/w6yVJerMU6MZnz8S6",
+      linkLabel: "Update student details",
+    },
+    {
+      date: "Friday 6 November 2026",
+      title: "Honest Burger food order",
+      detail: "Please update your food order preference for our meal at Honest Burger.",
+      link: "https://forms.gle/ewUUyoGsjnXRrToW8",
+      linkLabel: "Submit food preference",
     },
   ],
   reasons: [
