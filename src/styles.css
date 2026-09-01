@@ -964,9 +964,21 @@ main {
   position: relative;
   z-index: 1;
   display: grid;
+  gap: 14px;
+}
+
+.itinerary-summary {
+  display: grid;
   justify-items: stretch;
   gap: 14px;
   text-align: left;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+.itinerary-summary::-webkit-details-marker {
+  display: none;
 }
 
 .itinerary-symbol {
@@ -994,7 +1006,7 @@ main {
   gap: 2px;
   justify-items: center;
   text-align: center;
-  grid-template-rows: 2.1rem 1.8rem 4.8rem auto;
+  grid-template-rows: 2.1rem 1.8rem 4.8rem;
 }
 
 .itinerary-stop-copy strong {
@@ -1459,11 +1471,70 @@ main {
 
   .itinerary-row {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 12px;
+  }
+
+  .itinerary-stop {
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .itinerary-summary {
+    gap: 10px;
+    padding-right: 28px;
+  }
+
+  .itinerary-summary::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid var(--muted);
+    border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg);
+    transition: transform 0.15s ease;
+  }
+
+  details[open] > .itinerary-summary::after {
+    transform: rotate(-135deg);
+  }
+
+  .itinerary-symbol {
+    width: 64px;
+    height: 64px;
   }
 
   .itinerary-stop-copy {
     grid-template-rows: auto;
+    gap: 1px;
+  }
+
+  .itinerary-stop-copy strong {
+    font-size: 1.3rem;
+  }
+
+  .itinerary-stop-copy span {
+    font-size: 0.9rem;
+  }
+
+  .itinerary-stop-copy h3 {
+    font-size: 1rem;
+    max-width: none;
+    min-height: 0;
+    overflow: visible;
+    display: block;
+    -webkit-line-clamp: unset;
+  }
+
+  .itinerary-highlights {
+    font-size: 0.85rem;
+    max-width: none;
+  }
+
+  .itinerary-subhighlights {
+    font-size: 0.8rem;
   }
 
   .why-matters-row {

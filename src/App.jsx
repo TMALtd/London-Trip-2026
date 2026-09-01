@@ -86,6 +86,9 @@ function renderItineraryHighlights(highlights) {
 
 function App() {
   const [countdown, setCountdown] = useState(getCountdownParts());
+  const [itineraryDefaultOpen] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth > 760 : true
+  );
   const currentDateLabel = currentDateFormatter.format(new Date());
   const sortedUpdates = sortUpdates(tripData.latestUpdates, new Date());
   const itineraryRows = [tripData.itinerary.slice(0, 4), tripData.itinerary.slice(4, 8)];
@@ -303,17 +306,19 @@ function App() {
             {itineraryRows.map((row, rowIndex) => (
               <div className="itinerary-row" key={`itinerary-row-${rowIndex + 1}`}>
                 {row.map((item) => (
-                  <article className="itinerary-stop" key={item.day}>
-                    <div className="itinerary-symbol">
-                      <img src={item.icon} alt="" />
-                    </div>
-                    <div className="itinerary-stop-copy">
-                      <strong>{item.day}</strong>
-                      <span>{item.date}</span>
-                      <h3>{item.title}</h3>
-                      {renderItineraryHighlights(item.highlights)}
-                    </div>
-                  </article>
+                  <details className="itinerary-stop" key={item.day} open={itineraryDefaultOpen}>
+                    <summary className="itinerary-summary">
+                      <div className="itinerary-symbol">
+                        <img src={item.icon} alt="" />
+                      </div>
+                      <div className="itinerary-stop-copy">
+                        <strong>{item.day}</strong>
+                        <span>{item.date}</span>
+                        <h3>{item.title}</h3>
+                      </div>
+                    </summary>
+                    {renderItineraryHighlights(item.highlights)}
+                  </details>
                 ))}
               </div>
             ))}
