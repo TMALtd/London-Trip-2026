@@ -717,6 +717,11 @@ main {
   white-space: normal;
 }
 
+.no-wrap-subtitle .section-copy {
+  max-width: none;
+  white-space: nowrap;
+}
+
 .parent-info-section .section-copy {
   max-width: 100%;
 }
